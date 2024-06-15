@@ -1,0 +1,249 @@
+.allTracking{
+    margin: auto;
+    .trackingTitle{
+        background: $green;
+        margin-top: -3.5rem;
+        padding-bottom: 2rem;
+        padding-top: 5rem;
+        h4{
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            margin: auto;
+        }
+    }
+    .trackingData{
+        padding: 1rem;
+        background: $backHome;
+        margin: auto;
+        margin-top: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        p{
+            font-size: .8rem;
+            font-weight: 500;
+            color: $text1;
+            opacity: .7;
+            margin-bottom: 1rem;
+        }
+        input{
+            border: 1px solid #DFE3E7;
+            padding: .5rem;
+            color: $text1;
+            border-radius: 5px;
+            font-size: .9rem;
+            font-weight: 500;
+            width: 100%;
+            transition: all .3s ease-in-out;
+            &:focus{
+                border: 1px solid $green;
+            }
+        }
+        .error{
+            color: red;
+            font-size: .9rem;
+            font-weight: 300;
+        }
+        .captchaQuick{
+            display: grid;
+            justify-items: center;
+            margin-top: 1rem;
+        }
+        .gatePay{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+            grid-gap: .5rem;
+            .gateItem{
+                display: grid;
+                justify-content: center;
+                padding: .5rem;
+                box-shadow: 0 0 10px rgba(0,0,0,.1);
+                border-radius: 10px;
+                cursor: pointer;
+                border: 2px solid $border1;
+                filter: grayscale(1);
+                transition: all .3s ease-in-out;
+                img{
+                    width: 3rem;
+                    height: 3rem;
+                    object-fit: contain;
+                }
+                &:hover{
+                    filter: grayscale(0);
+                }
+            }
+            .active{
+                border: 2px solid $green;
+                filter: grayscale(0);
+            }
+        }
+        .trackingItems{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+            grid-gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .trackingItem{
+            label{
+                font-size: .9rem;
+                font-weight: 500;
+                color: $text1;
+                opacity: .7;
+                margin-bottom: .5rem;
+                display: grid;
+            }
+        }
+        .buttons{
+            display: flex;
+            justify-content: center;
+            button{
+                padding: .3rem .5rem;
+                background: $green;
+                font-size: 1rem;
+                font-weight: 300;
+                color: white;
+                border-radius: 5px;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            .trackingItems{
+                display: block;
+            }
+        }
+    }
+    .paymentData{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+    .payTracked{
+        padding: 1rem;
+        background: $backHome;
+        margin: auto;
+        margin-top: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        display: none;
+        .trackedTitle{
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: $text1;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid $border1;
+        }
+        table{
+            background: $backHome;
+            border-radius: .3rem;
+            box-shadow: 0 0 10px rgba(0,0,0,.05);
+            margin-top: 1rem;
+            width: 100%;
+            tr{
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(1px , 1fr));
+                align-items: center;
+                grid-gap: 1rem;
+                padding: 1rem;
+                th{
+                    font-weight: 700;
+                    color: $text1;
+                    font-size: .85rem;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+                }
+                td{
+                    font-weight: 300;
+                    font-size: .85rem;
+                    text-align: center;
+                    color: $text1;
+                    a{
+                        display: grid;
+                        align-items: center;
+                    }
+                    .active{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: center;
+                        align-items: center;
+                        background: transparent;
+                        &:before{
+                            border-radius: 10px;
+                            width: 10px;
+                            height: 10px;
+                            background-color: #00C58D;
+                            content: "";
+                            display: inline-block;
+                            margin-left: 10px;
+                        }
+                    }
+                    .unActive{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: center;
+                        align-items: center;
+                        background: transparent;
+                        &:before{
+                            border-radius: 10px;
+                            width: 10px;
+                            height: 10px;
+                            background-color: #FC5C63;
+                            content: "";
+                            display: inline-block;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                .buttons{
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    grid-gap: .5rem;
+                    button{
+                        padding: .3rem;
+                        border-radius: 5px;
+                        background: red;
+                        color: white;
+                        font-size: .8rem;
+                    }
+                    a{
+                        font-size: .8rem;
+                        padding: .3rem;
+                        border-radius: 5px;
+                        background: green;
+                        color: white;
+                        &:nth-child(2){
+                            background: orange;
+                        }
+                    }
+                }
+                &:nth-child(even){
+                    background: #eee;
+                }
+            }
+        }
+        @media screen and (max-width:700px) {
+            table{
+                tbody{
+                    overflow-x: scroll;
+                    width: 19rem;
+                    display: grid;
+                    tr{
+                        padding: .5rem;
+                        grid-gap: .5rem;
+                        grid-template-columns: repeat(7,auto);
+                        td,th{
+                            font-size: .7rem;
+                            font-weight: 300;
+                            min-width: 8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

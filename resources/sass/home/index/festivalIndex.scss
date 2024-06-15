@@ -1,0 +1,198 @@
+.allFestivalIndex{
+    margin-top: 2rem;
+    padding: 4rem 0;
+    background: url('/img/backStore.png');
+    background-size: 170% auto;
+    animation: shine 10s linear infinite;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    position: relative;
+    z-index: 1;
+    @keyframes shine {
+        to {
+            background-position: 200% center;
+        }
+    }
+    $firecrackerLen : 50;
+    $letHue : random(37);
+    $s-min: 20;
+    $s-max: 70;
+    $l-min: 50;
+    $l-max: 70;
+    @function PI(){
+        @return 3.14159265;
+    }
+    &:before{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 10;
+        content: "";
+    }
+    .width{
+        margin: auto;
+        height: 100%;
+        position: relative;
+        z-index: 20;
+        .title{
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: .1px;
+            margin-bottom: 4rem;
+        }
+        .festivalContainer{
+            display: grid;
+            align-items: center;
+            grid-template-columns: auto 1fr auto;
+            grid-gap: 2rem;
+            height: 100%;
+            padding: 0 4rem;
+            .firecracker{
+                position: relative;
+                @for $i from 1 through $firecrackerLen{
+                    @keyframes gravity-#{$i}{
+                        from{
+                            top:0;
+                            left:0;
+                        }
+                        100%{top:random(30) -  50 + px;}
+                    }
+                    @keyframes anim-#{$i}{
+                        from{
+                            top:0;
+                            left:0;
+                            //filter:blur(0px);
+                            opacity:random(1);
+                            $letHue : random(360);
+                            background-color: hsl( $letHue , 100%, 50%);
+                            box-shadow: 0px 0px 0px 0px hsl($letHue, 100%, 50%);
+                        }
+                        50%{
+                            opacity:1;
+                            //animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);
+                            box-shadow: 0px 0px 0px 0px hsl($letHue, 100%, 50%);
+                        }
+                        70%{
+                            //filter:blur(0px);
+                            $letHue : random(60-15) + 15;
+                            background-color: hsl( $letHue , 100%, 50%);
+                            //box-shadow: 0px 0px 0px 0px hsl($letHue, 100%, 50%);
+                        }
+
+                        97%{
+                            top:random(180) - 90 + px;
+                            left:random(180) - 90 + px;
+                            width:random(4);
+                            transform:rotate(random(720)-360+deg);
+                            //filter:blur(1px);
+                            $letHue : random(360);
+                            $letHue2 : random(60-15) + 15;
+                            background-color: hsl($letHue, 100% , 50%);
+                            box-shadow: 0px 0px random(10)+px random(10)+px hsl($letHue, 100%, 50%);
+                        }
+                        100%{
+                            opacity:0;
+                            $letHue : random(360);
+
+                        }
+
+                    }
+                    span:nth-child(#{$i}){
+                        position:absolute;
+                        $letDelayRd : (random(10) + 1) / 20;
+                        animation: gravity-#{$i} 1s  ease-in $letDelayRd+s infinite;
+                        i{
+                            position:absolute;
+                            animation: anim-#{$i} 1s  ease-out $letDelayRd+s infinite;
+                            width:5px;
+                            height:2px;
+                            border-radius:100%;
+                            background:hsl ( $letHue, 100%, 50%);
+                            box-shadow: 0px 0px 5px 0px hsl($letHue, 100%, 50%);
+                        }
+                    }
+                }
+            }
+            .countdown2 {
+                text-align: center;
+                direction: ltr;
+                .countdown-section {
+                    display: inline-block;
+                    width: 120px;
+                    .countdown-time {
+                        border-radius: 20px;
+                        color: red;
+                        border: 3px solid red;
+                        display: block;
+                        height: 100px;
+                        line-height: 100px;
+                        width: 100px;
+                        font-size: 2.3rem;
+                        font-weight: 900;
+                        margin: auto;
+                        margin-bottom: .5rem;
+                    }
+                    .countdown-label{
+                        color: rgba(255,255,255,.7);
+                        font-size: 1rem;
+                        text-align: center;
+                        font-weight: 500;
+                    }
+                    &:last-child{
+                        .countdown-time {
+                            color: $green;
+                            border: 3px solid $green;
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 800px) {
+            .title{
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+            }
+            .festivalContainer{
+                grid-template-columns: 1fr;
+                $firecrackerLen : 0;
+                $letHue : random(2);
+                padding: 0;
+                $s-min: 0;
+                $s-max: 0;
+                $l-min: 0;
+                $l-max: 0;
+                .firecracker{
+                    position: absolute;
+                    top: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                .countdown2 {
+                    .countdown-section {
+                        width: 60px;
+                        .countdown-time {
+                            border: 1px solid red;
+                            height: 50px;
+                            line-height: 50px;
+                            width: 50px;
+                            font-size: 1.2rem;
+                        }
+                        .countdown-label{
+                            font-size: .8rem;
+                        }
+                        &:last-child{
+                            .countdown-time {
+                                border: 1px solid $green;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

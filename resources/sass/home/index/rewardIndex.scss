@@ -1,0 +1,79 @@
+.allRewardIndex{
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    .rewardContainer{
+        padding: 1rem;
+        background: $widgetHome;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        height: 10rem;
+        position: relative;
+        .right{
+            h4{
+                font-size: 1.3rem;
+                font-weight: 500;
+                color: $text1;
+            }
+            p{
+                font-size: 1rem;
+                font-weight: 300;
+                color: $text1;
+                opacity: .7;
+                margin: 1rem 0;
+            }
+            button{
+                padding: .2rem 1rem;
+                border-radius: 5px;
+                color: white;
+                background: $green;
+                font-size: .9rem;
+                font-weight: 300;
+            }
+        }
+        .userList{
+            position: absolute;
+            left: 1rem;
+            background: $backHome;
+            padding: 1rem;
+            border-radius: 10px;
+            top: -2rem;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            width: 15rem;
+            h4{
+                font-size: 1rem;
+                font-weight: 700;
+                color: $text1;
+                opacity: .7;
+            }
+            ul{
+                li{
+                    display: grid;
+                    grid-template-columns: auto 1fr auto;
+                    align-items: center;
+                    grid-gap: .3rem;
+                    margin-top: 1rem;
+                    font-size: .7rem;
+                    font-weight: 300;
+                    color: $text1;
+                    h5{
+                        font-size: 1.2rem;
+                        color: $green;
+                        background: rgba(0, 128, 0, 0.2);
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 5px;
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    span{
+                        font-size: .65rem;
+                        font-weight: 300;
+                        color: $text1;
+                    }
+                }
+            }
+        }
+    }
+}

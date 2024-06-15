@@ -1,0 +1,271 @@
+.allBackProduct{
+  height: 35rem;
+  margin-top: 2rem;
+  .allBackProductBlocks{
+    height: 24rem;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+    background-size: cover;
+    padding: 2rem 0;
+    &:before{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      content: "";
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    .allBackProductBlock{
+      margin: auto;
+      position: relative;
+      z-index: 100;
+      .allBackProductTitle{
+        text-align: center;
+        margin-bottom: 3rem;
+        h3{
+          font-size: 2rem;
+          font-weight: 700;
+          color: white;
+          margin-bottom: .5rem;
+        }
+        a{
+          font-size: 1rem;
+          font-weight: 500;
+          text-align: center;
+          color: rgba(255, 255, 255, 0.7);
+        }
+        @media screen and (max-width: 720px) {
+          h3{
+            font-size: 1.1rem;
+          }
+          p{
+            font-size: .65rem;
+            a{
+              font-size: .65rem;
+            }
+          }
+        }
+      }
+      .slider-backProduct{
+        button.owl-prev{
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          span{
+            font-size: 2.5rem;
+            padding: 1rem;
+            background: white;
+            height: 3rem;
+            display: grid;
+            align-content: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.2);
+          }
+        }
+        button.owl-next{
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          span{
+            font-size: 2.5rem;
+            padding: 1rem;
+            background: white;
+            height: 3rem;
+            display: grid;
+            align-content: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.2);
+          }
+        }
+        a{
+          background: $backHome;
+          border-radius: 10px;
+          padding: 1rem;
+          box-shadow: 0 0 10px rgba(0,0,0,.05);
+          height: 100%;
+          display: grid;
+          border-left: 1px solid $border1;
+          border-top: 1px solid $border1;
+          overflow: hidden;
+          min-height: 22.5rem;
+          .pic{
+            overflow: hidden;
+            position: relative;
+            img{
+              width: 100%;
+              object-fit: contain;
+              transition: all .6s ease-in-out;
+              padding-top: 1rem;
+              &:nth-child(2){
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+              }
+            }
+            &:before{
+              content: "";
+              position: absolute;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              animation: fadee2 3s infinite;
+              z-index: 1;
+              @keyframes fadee2 {
+                0% {
+                  background:none;
+                  right:-200%
+                }
+                50% {
+                  right:100%;
+                  background:linear-gradient(70deg,#0000 33%,#ffffff21 50%,#0000 66%)
+                }
+                51% {
+                  background:none
+                }
+                100% {
+                  right:-200%
+                }
+              }
+            }
+          }
+          .postTitle{
+            text-align: center;
+            max-width: 90%;
+            font-size: .85rem;
+            font-weight: 300;
+            line-height: 25px;
+            color: $text1;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            opacity: .9;
+            height: 3.2rem;
+            margin-top: 1rem;
+          }
+          .postPrice{
+            height: 3rem;
+            display: grid;
+            align-items: end;
+            text-align: center;
+            margin-top: .5rem;
+            s{
+              font-size: .8rem;
+              line-height: 1.692;
+              font-weight: 300;
+              color: $text1;
+              opacity: .7;
+              text-align: center;
+              width: 100%;
+            }
+            h3{
+              text-align: center;
+              width: 100%;
+              color: $text1;
+              letter-spacing: 0;
+              font-weight: 500;
+              font-size: 1.2rem;
+              line-height: 1.5;
+              span{
+                letter-spacing: .1px;
+                font-size: .8rem;
+              }
+            }
+          }
+          .checkCount{
+            border-bottom: 1px solid $border1;
+            z-index: 2;
+            height: 27px;
+            position: relative;
+            width: 100%;
+            span{
+              color: $text2;
+              font-size: 1rem;
+              line-height: 1.222;
+              font-weight: 400;
+              position: absolute;
+              left: 50%;
+              -webkit-transform: translate(-50%,-50%);
+              transform: translate(-50%,-50%);
+              top: 115%;
+              background: $backHome;
+              padding: 0 1rem;
+              height: 21px;
+            }
+          }
+          &:hover{
+            .pic{
+              img{
+                &:nth-child(1){
+                  top: 0;
+                  right: 0;
+                  visibility: hidden;
+                  opacity: 0;
+                  position: absolute;
+                }
+                &:nth-child(2){
+                  position: relative;
+                  top: auto;
+                  visibility: visible;
+                  opacity: 1;
+                  right: auto;
+                }
+              }
+            }
+          }
+        }
+        @media screen and (max-width: 700px) {
+          a{
+            min-height: auto;
+            .pic{
+              height: auto;
+              img{
+                height: 8rem !important;
+              }
+            }
+            .postTitle{
+              a{
+                font-size: .7rem;
+              }
+            }
+            .postPrice{
+              .postPriceItem{
+                s{
+                  font-size: .7rem;
+                }
+                h3{
+                  font-size: 1rem;
+                  span{
+                    letter-spacing: .1px;
+                    font-size: .6rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 700px) {
+        .allBackProductTitle {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .allBackProduct{
+    height: 26rem;
+    .allBackProductBlocks{
+      height: 20rem;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.allIndex{
+    .indexData{
+        opacity: 0;
+        margin-top: 8rem;
+        &:nth-child(2){
+            opacity: 1;
+            margin-top: 2rem !important;
+        }
+        &:nth-child(3){
+            opacity: 1;
+            margin-top: 2rem;
+        }
+    }
+    #done{
+        &:nth-child(2){
+            margin-top: 0 !important;
+        }
+        .suggestIndex{
+            .title{
+                margin-top: 0 !important;
+                opacity: 1 !important;
+                height: auto;
+            }
+        }
+        .allProductList{
+            .title{
+                h3{
+                    transform: translateX(0) !important;
+                }
+                a{
+                    transform: translateX(0) !important;
+                }
+            }
+        }
+        .storyItems{
+            .storyItem{
+                img{
+                    width: 8rem !important;
+                    height: 8rem !important;
+                }
+            }
+            @media screen and (max-width: 920px) {
+                .storyItem{
+                    img{
+                        width: 4rem !important;
+                        height: 4rem !important;
+                    }
+                }
+            }
+        }
+        .allCircleProduct{
+            .circle-container {
+                transform: rotate(0deg) !important;
+            }
+        }
+        .bestIndex{
+            .bestItems {
+                a{
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 920px) {
+        .indexData{
+            &:nth-child(4){
+                opacity: 1;
+                margin-top: 2rem;
+            }
+            &:nth-child(5){
+                opacity: 1;
+                margin-top: 2rem;
+            }
+        }
+    }
+}

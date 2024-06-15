@@ -1,0 +1,326 @@
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 900;
+    src: url(fonts/irsans-b.eot);
+    src: url(fonts/irsans-b.eot?#iefix) format("embedded-opentype"), url(fonts/irsans-b.woff) format("woff"), url(fonts/irsans-b.ttf) format("truetype")
+}
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 700;
+    src: url(fonts/irsans-m.eot);
+    src: url(fonts/irsans-m.eot?#iefix) format("embedded-opentype"), url(fonts/irsans-m.woff) format("woff"), url(fonts/irsans-m.ttf) format("truetype")
+}
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 500;
+    src: url(fonts/irsans.eot);
+    src: url(fonts/irsans.eot?#iefix) format("embedded-opentype"), url(fonts/irsans.woff) format("woff"), url(fonts/irsans.ttf) format("truetype")
+}
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 300;
+    src: url(fonts/irsans-l.eot);
+    src: url(fonts/irsans-l.eot?#iefix) format("embedded-opentype"), url(fonts/irsans-l.woff) format("woff"), url(fonts/irsans-l.ttf) format("truetype")
+}
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 100;
+    src: url(fonts/irsans-u.eot);
+    src: url(fonts/irsans-u.eot?#iefix) format("embedded-opentype"), url(fonts/irsans-u.woff) format("woff"), url(fonts/irsans-u.ttf) format("truetype")
+}
+@font-face {
+    font-family: digikala;
+    src: url(fonts/Digikala.eot);
+    src: url(fonts/Digikala.eot?#iefix) format("eot"), url(fonts/Digikala.woff2) format("woff2"), url(fonts/Digikala.woff) format("woff"), url(fonts/Digikala.ttf) format("truetype")
+}
+i,
+html {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    font-family: 'irsans', irsans, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-style: normal;
+    line-height: normal;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    display: inline-block
+}
+input, textarea, select, select option, button{
+    font-family: 'irsans', irsans, sans-serif;
+    outline-style: none;
+}
+button, input[type='submit']{
+    cursor: pointer;
+}
+input:focus{
+    outline: 0;
+}
+li,
+a {
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    outline: 0;
+}
+li{
+    transition:none
+}
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+:root{
+    $green: #1e90ff;
+}
+@import "variablesDark";
+body {
+    direction: rtl;
+    font-family: 'irsans', irsans, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    overflow-x: hidden;
+    height: 100%;
+    background: $allBack;
+    .hidden,.hiddenSeo{
+        position: fixed;
+        opacity: 0;
+        visibility: hidden;
+        top: 0;
+    }
+    .width{
+        width: 70%;
+    }
+    .allLoading{
+        background: rgba(0,0,0,.5);
+        z-index: 4000;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        .allLoadings{
+            width: 10rem;
+            height: 10rem;
+            padding: 1rem;
+            margin: auto;
+            background: white;
+            display: grid;
+            align-items: center;
+            border-radius: .4rem;
+            overflow: hidden;
+            i{
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                .loading{
+                    width: 3rem;
+                    height: 3rem;
+                    fill: $green;
+                    animation: arrow-anim2 .5s ease infinite;
+                    @keyframes arrow-anim2 {
+                        0% {
+                            transform: rotate(0deg);
+                        }
+                        15% {
+                            transform: rotate(45deg);
+                        }
+                        25% {
+                            transform: rotate(90deg);
+                        }
+                        50% {
+                            transform: rotate(180deg);
+                        }
+                        75% {
+                            transform: rotate(270deg);
+                        }
+                        85% {
+                            transform: rotate(300deg);
+                        }
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+            }
+            h3{
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: $text1;
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .textFloat{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: 0;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-orientation: mixed;
+        writing-mode: vertical-rl;
+        z-index: 4;
+        span{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: .5rem;
+            justify-content: center;
+            align-items: center;
+            background: $backHome;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            font-size: .8rem;
+            color: red;
+            font-weight: 500;
+            padding: .5rem .3rem;
+            i{
+                transform: rotate(180deg);
+                display: grid;
+                align-items: center;
+                svg{
+                    width: .9rem;
+                    height: .9rem;
+                    fill: red;
+                }
+                animation: arrow-anim3 1s ease infinite;
+                margin-bottom: 0;
+                @keyframes arrow-anim3 {
+                    0% {
+                        transform: rotate(180deg);
+                    }
+                    50% {
+                        transform: rotate(250deg);
+                    }
+                    100% {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1800px) {
+        .width{
+            width: 85%;
+        }
+    }
+    @media screen and (max-width:1600px) {
+        .width{
+            width: 90%;
+        }
+    }
+    @media screen and (max-width:1400px) {
+        .width{
+            width: 97%;
+        }
+    }
+    @media screen and (max-width:700px) {
+        .width{
+            width: 95%;
+        }
+        .textFloat{
+            display: none;
+        }
+        .flBtn{
+            display: none;
+        }
+    }
+}
+@import "home/header/headerIndex";
+@import "home/header/headerIndex2";
+@import "home/footer/footerIndex";
+@import "home/footer/footer2";
+@import "home/become/index";
+@import "home/index/index";
+@import "home/index/bestIndex";
+@import "home/index/adHooper";
+@import "home/index/categoryPost";
+@import "home/index/offProduct";
+@import "home/index/suggestIndex";
+@import "home/index/newsIndex";
+@import "home/index/searchAdvance";
+@import "home/index/productList";
+@import "home/index/digiProduct";
+@import "home/index/adIndex";
+@import "home/index/compareIndex";
+@import "home/index/popUpIndex";
+@import "home/index/sellerIndex";
+@import "home/index/momentProduct";
+@import "home/index/bigIndex";
+@import "home/index/advanceProduct";
+@import "home/index/collectionIndex";
+@import "home/index/backProduct";
+@import "home/index/circleProduct";
+@import "home/index/storyIndex";
+@import "home/index/loanIndex";
+@import "home/index/rewardIndex";
+@import "home/index/festivalIndex";
+@import "home/index/faqIndex";
+@import "home/gift/giftIndex";
+@import "home/compare/index";
+@import "home/faq/index";
+@import "home/single/singleIndex";
+@import "home/single/product3";
+@import "home/single/chart";
+@import "home/single/comment";
+@import "home/single/blog";
+@import "home/single/allShare";
+@import "home/single/notification";
+@import "home/single/product2";
+@import "home/auth/authIndex";
+@import "home/auth/authIndex2";
+@import "home/cart/cartIndex";
+@import "home/cart/checkouttIndex";
+@import "home/cart/addAddress";
+@import "home/cart/buy";
+@import "home/archive/allNews";
+@import "home/archive/product";
+@import "home/archive/category";
+@import "home/profile/list";
+@import "home/profile/index";
+@import "home/profile/like";
+@import "home/profile/comment";
+@import "home/profile/showPay";
+@import "home/profile/ticket";
+@import "home/profile/wallet";
+@import "home/page/index";
+@import "home/order/tracking";
+@import "home/index/fastSearch";
+@import "home/lucky/index";
+@import "home/index/sliderIndex";
+@import "home/index/sliderIndex2";
+@import "home/ticket/index";
+@import "home/index/textIndex";
+@import "home/quickBuy";
+@import "home/counselingFast";
+@import "home/floatBtn";
+@import "paginate";

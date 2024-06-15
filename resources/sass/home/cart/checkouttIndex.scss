@@ -1,0 +1,721 @@
+.allCartIndex{
+    margin: auto;
+    margin-top: 1rem;
+    .checkoutItems{
+        display: grid;
+        grid-template-columns: 1fr 20rem;
+        grid-gap: 1rem;
+        margin-top: 1rem;
+        .checkoutOptions{
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: $backHome;
+            padding: 1rem;
+            .checkoutTitle{
+                font-size: 1.2rem;
+                font-weight: 900;
+                color: $text1;
+                margin-bottom: 1rem;
+                letter-spacing: .5px;
+            }
+            .addresses{
+                border-bottom: 3px dashed $border1;
+                ul{
+                    li{
+                        .address{
+                            margin-bottom: 1rem;
+                            padding: 1rem;
+                            border-radius: 10px;
+                            box-shadow: 0 0 10px $border1;
+                            background: $backHome;
+                            cursor: pointer;
+                            .titleAddress{
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                justify-content: right;
+                                align-items: center;
+                                grid-gap: .5rem;
+                                i{
+                                    display: grid;
+                                    align-items: center;
+                                    svg{
+                                        width: 1.5rem;
+                                        height: 1.5rem;
+                                        fill: red;
+                                    }
+                                }
+                                span{
+                                    font-size: 1rem;
+                                    font-weight: 500;
+                                    color: red;
+                                }
+                            }
+                            .active{
+                                i{
+                                    svg{
+                                        fill: $green;
+                                    }
+                                }
+                                span{
+                                    color: $green;
+                                }
+                            }
+                            .add{
+                                i{
+                                    svg{
+                                        fill: $text1;
+                                    }
+                                }
+                                span{
+                                    color: $text1;
+                                }
+                            }
+                            p{
+                                font-size: .85rem;
+                                color: $text1;
+                                font-weight: 300;
+                                margin-top: 1rem;
+                            }
+                            .nameAddress{
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-top: 1rem;
+                                h5{
+                                    font-weight: 500;
+                                    color: black;
+                                    font-size: .8rem;
+                                }
+                                .buttons{
+                                    display: grid;
+                                    grid-template-columns: auto auto auto;
+                                    justify-content: left;
+                                    align-items: center;
+                                    grid-gap: .5rem;
+                                    button{
+                                        border-radius: 5rem;
+                                        padding: .3rem 1rem;
+                                        margin-right: .5rem;
+                                        background: rgba(0, 197, 141, 0.1);
+                                        color: green;
+                                    }
+                                    div{
+                                        border-radius: 5rem;
+                                        padding: .3rem 1rem;
+                                        margin-right: .5rem;
+                                        background: rgba(255, 159, 0, 0.1);
+                                        color: orange;
+                                        &:last-child{
+                                            background: #FFEBEC;
+                                            color: #EE232B;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #carrier{
+                ul{
+                    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+                    margin-top: 1rem;
+                }
+            }
+            .days{
+                border-bottom: 3px dashed $border1;
+                padding-bottom: 1rem;
+                margin-top: 1rem;
+                ul{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill , minmax(7rem , 1fr));
+                    grid-gap: 2rem;
+                    align-items: center;
+                    margin-top: 2rem;
+                    li{
+                        h3{
+                            font-size: 1rem;
+                            font-weight: 300;
+                            color: $text1;
+                        }
+                        p{
+                            font-size: .7rem;
+                            font-weight: 300;
+                            color: $text1;
+                            opacity: .7;
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            justify-content: right;
+                            align-items: center;
+                            grid-gap: .3rem;
+                        }
+                        .dayItem{
+                            h4{
+                                font-size: .9rem;
+                                text-align: center;
+                                font-weight: 500;
+                                color: $text1;
+                            }
+                            h5{
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                justify-content: center;
+                                align-items: center;
+                                grid-gap: .5rem;
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: $green;
+                                margin-top: .5rem;
+                            }
+                            h6{
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: $green;
+                                margin-top: .5rem;
+                                text-align: center;
+                            }
+                            div{
+                                position: relative;
+                                cursor: pointer;
+                                border: 2px solid $border1;
+                                padding: 1rem;
+                                border-radius: 1.5rem;
+                                margin-top: .5rem;
+                            }
+                            .active{
+                                border: 2px solid #67B930;
+                                h4{
+                                    color: #00867D;
+                                }
+                                i{
+                                    position: absolute;
+                                    right: 0;
+                                    left: 0;
+                                    bottom: -.5rem;
+                                    height: 1rem;
+                                    display: grid;
+                                    justify-items: center;
+                                    h4{
+                                        width: 40%;
+                                        display: grid;
+                                        background: white;
+                                        position: relative;
+                                        justify-content: center;
+                                    }
+                                    svg{
+                                        fill: #00867D;
+                                        width: 1rem;
+                                        height: 1rem;
+                                    }
+                                }
+                            }
+                            .dayUn{
+                                i{
+                                    position: fixed;
+                                    right: 0;
+                                    visibility: hidden;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .payMethod{
+                margin-top: 1rem;
+                ul{
+                    margin-top: 1rem;
+                    li{
+                        padding: 1rem 0;
+                        button{
+                            display: grid;
+                            grid-template-columns: auto auto 1fr;
+                            align-items: center;
+                            grid-gap: 1rem;
+                            background: transparent;
+                            font-size: .85rem;
+                            font-weight: 500;
+                            color: $text1;
+                            i{
+                                display: grid;
+                                align-items: center;
+                                justify-content: center;
+                                svg{
+                                    width: 1.5rem;
+                                    height: 1.5rem;
+                                    fill: $text1;
+                                }
+                            }
+                            &:before{
+                                content: "";
+                                border: 2px solid $text1;
+                                background: white;
+                                border-radius: 100%;
+                                width: .9rem;
+                                height: .9rem;
+                            }
+                        }
+                        .active{
+                            color: $green;
+                            i{
+                                svg{
+                                    fill: $green;
+                                }
+                            }
+                            &:before{
+                                border: 2px solid $green;
+                                background: $green;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .left{
+            .discount{
+                box-shadow: 0 0 10px rgba(0,0,0,.1);
+                background: $backHome;
+                display: grid;
+                grid-template-columns: 1fr;
+                border-radius: 10px;
+                padding: 1rem;
+                border: 1px solid $border1;
+                margin-bottom: 1rem;
+                h4{
+                    color:$text1;
+                    font-size: .8rem;
+                    font-weight: 400;
+                }
+                label{
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    margin-top: .5rem;
+                    padding: .5rem;
+                    border: 1px solid $border1;
+                    border-radius: 5px;
+                    height: 2.9rem;
+                    input{
+                        background: transparent;
+                        color:$text1;
+                        font-size: .8rem;
+                        font-weight: 400;
+                    }
+                    button{
+                        border-radius: 5px;
+                        background: $green;
+                        padding: .3rem .5rem;
+                        font-size: .75rem;
+                        font-weight: 300;
+                        color: white;
+                    }
+                }
+            }
+            .cartNext{
+                background: $backHome;
+                box-shadow: 0 0 10px rgba(0,0,0,.1);
+                border-radius: 10px;
+                overflow: hidden;
+                .cartPriceItem{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: space-between;
+                    align-items: center;
+                    background: $backHome2;
+                    padding: .8rem;
+                    h4{
+                        font-size: .9rem;
+                        font-weight: 300;
+                        color: $text1;
+                    }
+                    span{
+                        font-size: 1rem;
+                        font-weight: 300;
+                        color: $text1;
+                    }
+                    h3{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: left;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        min-height: 2rem;
+                        font-size: 1.4rem;
+                        font-weight: 900;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        border-radius: 10px;
+                        color: $green;
+                    }
+                    &:nth-child(even){
+                        background: $backHome;
+                    }
+                }
+            }
+            .cartPay{
+                background: $backHome;
+                box-shadow: 0 0 10px rgba(0,0,0,.1);
+                border-radius: 10px;
+                margin-top: 1rem;
+                overflow: hidden;
+                position: sticky;
+                top: 1rem;
+                padding: 1rem;
+                .gatePay{
+                    display: grid;
+                    grid-template-columns: repeat(3,1fr);
+                    margin-bottom: 1rem;
+                    grid-gap: 1rem;
+                    .gateItem{
+                        display: grid;
+                        justify-content: center;
+                        padding: .5rem;
+                        box-shadow: 0 0 10px rgba(0,0,0,.1);
+                        border-radius: 10px;
+                        cursor: pointer;
+                        border: 2px solid $border1;
+                        filter: grayscale(1);
+                        transition: all .3s ease-in-out;
+                        img{
+                            height: 4rem;
+                            object-fit: contain;
+                        }
+                        &:hover{
+                            filter: grayscale(0);
+                        }
+                    }
+                    .active{
+                        border: 2px solid $green;
+                        filter: grayscale(0);
+                    }
+                }
+                .nextItem{
+                    padding: .5rem;
+                    display: grid;
+                    justify-content: center;
+                    button{
+                        display: grid;
+                        padding: .5rem 1rem;
+                        border-radius: 5px;
+                        background: $green;
+                        color: white;
+                        font-size: 1rem;
+                        font-weight: 300;
+                    }
+                }
+                .installmentType{
+                    padding: .5rem;
+                    display: grid;
+                    justify-content: center;
+                    button{
+                        display: grid;
+                        padding: .5rem 1rem;
+                        border-radius: 5px;
+                        background: $green;
+                        color: white;
+                        font-size: 1rem;
+                        font-weight: 300;
+                    }
+                }
+                .cardType{
+                    padding: .5rem;
+                    display: grid;
+                    justify-content: center;
+                    button{
+                        display: grid;
+                        padding: .5rem 1rem;
+                        border-radius: 5px;
+                        background: $green;
+                        color: white;
+                        font-size: 1rem;
+                        font-weight: 300;
+                    }
+                }
+                .note{
+                    margin-bottom: 1rem;
+                    label{
+                        font-size: .9rem;
+                        font-weight: 500;
+                        color: $text1;
+                    }
+                    textarea{
+                        width: 100%;
+                        margin-top: .5rem;
+                        padding: .5rem;
+                        font-size: .9rem;
+                        border: 1px solid $border1;
+                        border-radius: 5px;
+                        resize: vertical;
+                    }
+                }
+            }
+            .scoreProduct{
+                box-shadow: 0 0 10px rgba(0,0,0,.1);
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                justify-content: right;
+                grid-gap: .5rem;
+                margin-top: 1rem;
+                align-items: center;
+                background: $backHome;
+                border-radius: 10px;
+                padding: 1rem;
+                border: 1px solid $border1;
+                cursor: pointer;
+                i{
+                    display: grid;
+                    align-items: center;
+                    svg{
+                        width: 1.4rem;
+                        height: 1.4rem;
+                    }
+                    &:last-child{
+                        svg{
+                            width: .7rem;
+                            height: .7rem;
+                        }
+                    }
+                }
+                span{
+                    font-size: .8rem;
+                    font-weight: 300;
+                    color: $text1;
+                    span{
+                        font-size: 1rem;
+                        font-weight: 900;
+                        color: orange;
+                    }
+                }
+            }
+        }
+    }
+    .allPack{
+        display: none;
+        .showPack{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: hsla(0,0%,52.9%,.5);
+            z-index: 999;
+            overflow-y: scroll;
+            .showPackItems {
+                background: $backHome;
+                padding: 1rem;
+                width: 35%;
+                margin: auto;
+                border-radius: 10px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                .title{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: space-between;
+                    grid-gap: .5rem;
+                    align-items: center;
+                    .right{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: right;
+                        grid-gap: 1rem;
+                        align-items: center;
+                        span{
+                            font-size: 1rem;
+                            font-weight: 500;
+                            color: $text1;
+                        }
+                        i{
+                            cursor: pointer;
+                            svg{
+                                width: 1.5rem;
+                                height: 1.5rem;
+                                fill: red;
+                            }
+                        }
+                    }
+                    .close{
+                        cursor: pointer;
+                        svg{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            fill: $text1;
+                        }
+                    }
+                }
+                .showPackItem{
+                    margin: 1rem 0;
+                    label{
+                        color: $text1;
+                        font-weight: 500;
+                        font-size: .9rem;
+                        opacity: .7;
+                        margin-bottom: .5rem;
+                    }
+                    select{
+                        border: 1px solid $border1;
+                        padding: 0.3rem .5rem;
+                        background: $backHome;
+                        color: $text1;
+                        border-radius: .3rem;
+                        font-size: .8rem;
+                        width: 100%;
+                        opacity: .7;
+                        transition: all .3s ease-in-out;
+                        &:focus{
+                            box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                            border: 1px solid $blue;
+                        }
+                    }
+                }
+                ul{
+                    li{
+                        display: grid;
+                        grid-template-columns: auto 1fr;
+                        grid-gap: .5rem;
+                        margin-bottom: 1rem;
+                        align-items: center;
+                        span{
+                            color: $text1;
+                            font-weight: 300;
+                            font-size: .9rem;
+                        }
+                        input{
+                            border: 1px solid $border1;
+                            padding: 0.3rem .5rem;
+                            color: $text1;
+                            border-radius: .3rem;
+                            font-size: .8rem;
+                            width: 100%;
+                            transition: all .3s ease-in-out;
+                            &:focus{
+                                box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                                border: 1px solid $blue;
+                            }
+                        }
+                    }
+                }
+                button{
+                    background: $green;
+                    color: white;
+                    font-size: .8rem;
+                    font-weight: 300;
+                    display: grid;
+                    padding: .3rem 1rem;
+                    border-radius: 5px;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .allCard{
+        display: none;
+        .showCard{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: hsla(0,0%,52.9%,.5);
+            z-index: 999;
+            overflow-y: scroll;
+            .showPackItems {
+                background: $backHome;
+                padding: 1rem;
+                width: 35%;
+                margin: auto;
+                border-radius: 10px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                .title{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: space-between;
+                    grid-gap: .5rem;
+                    align-items: center;
+                    .right{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: right;
+                        grid-gap: 1rem;
+                        align-items: center;
+                        span{
+                            font-size: 1rem;
+                            font-weight: 500;
+                            color: $text1;
+                        }
+                        i{
+                            cursor: pointer;
+                            svg{
+                                width: 1.5rem;
+                                height: 1.5rem;
+                                fill: red;
+                            }
+                        }
+                    }
+                    .close{
+                        cursor: pointer;
+                        svg{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            fill: $text1;
+                        }
+                    }
+                }
+                .description{
+                    border-top: 2px solid $border1;
+                    padding: 1rem 0;
+                    margin-top: 1rem;
+                }
+                .note{
+                    margin-bottom: 1rem;
+                    label{
+                        font-size: .9rem;
+                        font-weight: 500;
+                        color: $text1;
+                    }
+                    textarea{
+                        width: 100%;
+                        margin-top: .5rem;
+                        padding: .5rem;
+                        font-size: .9rem;
+                        border: 1px solid $border1;
+                        border-radius: 5px;
+                        resize: vertical;
+                    }
+                }
+                button{
+                    background: $green;
+                    color: white;
+                    font-size: .8rem;
+                    font-weight: 300;
+                    display: grid;
+                    padding: .3rem 1rem;
+                    border-radius: 5px;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .checkoutItems{
+            display: block;
+            .left{
+                margin-top: 1rem;
+            }
+        }
+        .allPack{
+            .showPack{
+                .showPackItems {
+                    width: 96%;
+                }
+            }
+        }
+    }
+}

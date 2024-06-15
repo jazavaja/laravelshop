@@ -1,0 +1,517 @@
+.allCartIndex{
+    margin: auto;
+    margin-top: 1rem;
+    .alert{
+        background: rgba(255, 0, 0, 0.15);
+        color: $red;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        font-size: 0.9rem;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+        margin: 1rem 0;
+    }
+    .success{
+        background: rgba(0, 255, 0, 0.1);
+        color: green;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        font-size: 0.9rem;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+        margin: 1rem 0;
+    }
+    .helpCart{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 300;
+        color: $text1;
+        margin-bottom: 1rem;
+        background: $backHome;
+        box-shadow: 0 0 5px $border1;
+        padding: 0.75rem;
+        border-radius: 10px;
+        a{
+            background: $green;
+            padding: .3rem 1rem;
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+    }
+    .cartTab{
+        .tabs {
+            display: flex;
+            position: relative;
+            background-color: $backHome;
+            box-shadow: 0 0 5px $border1;
+            padding: 0.75rem;
+            border-radius: 10px;
+        }
+        .tab {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-gap: .5rem;
+            height: 40px;
+            width: 180px;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: color 0.15s ease-in;
+            color: $text1;
+        }
+        .active{
+            background: rgba(0, 128, 0, 0.15);
+            color: $green;
+            .notification{
+                background: $green;
+                color: white;
+            }
+        }
+
+        .notification {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            width: 1.7rem;
+            height: 1.7rem;
+            border-radius: 50%;
+            transition: 0.15s ease-in;
+            background: $backHome2;
+        }
+    }
+    .cartIndex{
+        display: grid;
+        grid-template-columns: 1fr 20rem;
+        grid-gap: 1rem;
+        margin: 1rem 0;
+        .right{
+            .cartItem{
+                margin-bottom: 1rem;
+                display: grid;
+                grid-template-columns: auto 1fr;
+                align-items: center;
+                grid-gap: 1rem;
+                padding: 1rem;
+                border-radius: 10px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+                background: $backHome;
+                .cartPic{
+                    img{
+                        width: 100%;
+                        max-width: 10rem;
+                        height: 8rem;
+                        object-fit: contain;
+                    }
+                }
+                .cartSubject{
+                    .titleCart{
+                        display: grid;
+                        grid-template-columns: 1fr auto;
+                        align-items: center;
+                        a{
+                            font-size: 1.1rem;
+                            font-weight: 700;
+                            color: $text1;
+                        }
+                        button{
+                            background: #FFEBEC;
+                            border-radius: 5rem;
+                            padding: .3rem 1rem;
+                            color: #EE232B;
+                        }
+                    }
+                    .price{
+                        display: grid;
+                        justify-content: left;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        min-height: 2rem;
+                        font-size: 1.2rem;
+                        font-weight: 900;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        border-radius: 10px;
+                        color: $green;
+                    }
+                    .cartData{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: right;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        margin-top: .5rem;
+                        h4{
+                            font-size: .9rem;
+                            color: $text1;
+                            font-weight: 300;
+                        }
+                        span{
+                            font-size: .8rem;
+                            font-weight: 300;
+                            color: $text1;
+                            letter-spacing: .1px;
+                        }
+                    }
+                    .inquiryData{
+                        font-size: .8rem;
+                        font-weight: 300;
+                        color: red;
+                        margin-top: .5rem;
+                    }
+                    .productCount{
+                        display: grid;
+                        grid-template-columns: auto 1fr auto;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 1rem;
+                        grid-gap: 1rem;
+                    }
+                    .leftCount{
+                        display: grid;
+                        justify-content: right;
+                    }
+                    .nextCount{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: left;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        color: orange;
+                        padding-bottom: .5rem;
+                        font-weight: 300;
+                        font-size: .75rem;
+                        cursor: pointer;
+                        i{
+                            display: grid;
+                            align-items: center;
+                            margin-top: .1rem;
+                        }
+                        svg{
+                            width: .8rem;
+                            height: .8rem;
+                            fill: orange;
+                        }
+                    }
+                    .rightCount{
+                        display: grid;
+                        grid-template-columns: auto 1fr auto;
+                        justify-content: right;
+                        border: 1px solid $border1;
+                        border-radius: 10px;
+                        width: 5rem;
+                        span{
+                            color: $text1;
+                            padding: .2rem .5rem;
+                            font-size: .95rem;
+                            background: transparent;
+                            cursor: pointer;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            #changeCart{
+                background: $backHome;
+                color: $text1;
+                box-shadow: 0 0 10px rgba(0,0,0,.1);
+                padding: .3rem 1rem;
+                border-radius: 10px;
+                font-size: .9rem;
+                font-weight: 500;
+                border: 1px solid $border1;
+            }
+        }
+        .left{
+            .cartNext{
+                background: $backHome;
+                box-shadow: 0 0 10px rgba(0,0,0,.1);
+                border-radius: 10px;
+                overflow: hidden;
+                .cartPriceItem{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: space-between;
+                    align-items: center;
+                    background: $backHome2;
+                    padding: .8rem;
+                    h4{
+                        font-size: .9rem;
+                        font-weight: 300;
+                        color: $text1;
+                    }
+                    span{
+                        font-size: 1rem;
+                        font-weight: 300;
+                        color: $text1;
+                    }
+                    h3{
+                        display: grid;
+                        justify-content: left;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        min-height: 2rem;
+                        font-size: 1.4rem;
+                        font-weight: 900;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        border-radius: 10px;
+                        color: $green;
+                    }
+                    &:nth-child(even){
+                        background: $backHome;
+                    }
+                }
+                .nextItem{
+                    padding: .5rem;
+                    display: grid;
+                    justify-content: center;
+                    a{
+                        display: grid;
+                        padding: .5rem 1rem;
+                        border-radius: 5px;
+                        background: $green;
+                        color: white;
+                        font-size: 1rem;
+                        cursor: pointer;
+                        font-weight: 300;
+                    }
+                }
+            }
+            .scoreProduct{
+                box-shadow: 0 0 10px rgba(0,0,0,.1);
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                justify-content: right;
+                grid-gap: .5rem;
+                margin-top: 1rem;
+                align-items: center;
+                background: $backHome;
+                border-radius: 10px;
+                padding: 1rem;
+                border: 1px solid $border1;
+                cursor: pointer;
+                i{
+                    display: grid;
+                    align-items: center;
+                    svg{
+                        width: 1.4rem;
+                        height: 1.4rem;
+                    }
+                    &:last-child{
+                        svg{
+                            width: .7rem;
+                            height: .7rem;
+                        }
+                    }
+                }
+                span{
+                    font-size: .8rem;
+                    font-weight: 300;
+                    color: $text1;
+                    span{
+                        font-size: 1rem;
+                        font-weight: 900;
+                        color: orange;
+                    }
+                }
+            }
+        }
+    }
+    .allCartIndexEmpty{
+        margin-top: 1rem;
+        display: grid;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        i{
+            svg{
+                fill: $green;
+                width: 7rem;
+                height: 7rem;
+            }
+        }
+        h3{
+            color: $green;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .topCartIndex{
+            width: 20rem;
+        }
+        .cartIndex{
+            display: block;
+            .right{
+                .cartItem{
+                    display: block;
+                    position: relative;
+                    .cartPic{
+                        display: grid;
+                        justify-content: center;
+                    }
+                    .cartSubject{
+                        .titleCart{
+                            display: block;
+                            a{
+                                font-size: .9rem;
+                                font-weight: 500;
+                                line-height: 2rem;
+                                color: $text1;
+                                opacity: .7;
+                            }
+                            button{
+                                position: absolute;
+                                top: 1rem;
+                                left: 1rem;
+                            }
+                        }
+                        .price{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                #changeCart{
+                    background: white;
+                    color: $text1;
+                    box-shadow: 0 0 10px rgba(0,0,0,.1);
+                    padding: .3rem 1rem;
+                    border-radius: 10px;
+                    font-size: .9rem;
+                    font-weight: 500;
+                    border: 1px solid $border1;
+                }
+            }
+            .left{
+                margin-top: 1rem;
+                .cartNext{
+                    background: white;
+                    box-shadow: 0 0 10px rgba(0,0,0,.1);
+                    border-radius: 10px;
+                    overflow: hidden;
+                    .cartPriceItem{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: space-between;
+                        align-items: center;
+                        background: #fafafa;
+                        padding: .8rem;
+                        h4{
+                            font-size: .9rem;
+                            font-weight: 300;
+                            color: $text1;
+                        }
+                        span{
+                            font-size: 1rem;
+                            font-weight: 300;
+                            color: $text1;
+                        }
+                        h3{
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            justify-content: left;
+                            align-items: center;
+                            grid-gap: .5rem;
+                            min-height: 2rem;
+                            font-size: 1.4rem;
+                            font-weight: 900;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            border-radius: 10px;
+                            color: $green;
+                            &:after{
+                                content: "\F06C\00FE0E";
+                                display: -webkit-box;
+                                display: -ms-flexbox;
+                                display: flex;
+                                -webkit-box-align: center;
+                                -ms-flex-align: center;
+                                align-items: center;
+                                -webkit-box-pack: center;
+                                -ms-flex-pack: center;
+                                justify-content: center;
+                                font-weight: 400;
+                                letter-spacing: normal;
+                                font-family: digikala;
+                                font-size: 1.2rem;
+                                -webkit-font-smoothing: antialiased;
+                                -moz-osx-font-smoothing: grayscale;
+                                font-style: normal;
+                                font-variant: normal;
+                                font-weight: 400;
+                                text-decoration: none;
+                                text-transform: none;
+                                line-height: 1;
+                                box-sizing: inherit;
+                            }
+                        }
+                        &:nth-child(even){
+                            background: white;
+                        }
+                    }
+                    .nextItem{
+                        padding: .5rem;
+                        display: grid;
+                        justify-content: center;
+                        a{
+                            display: grid;
+                            padding: .5rem 1rem;
+                            border-radius: 5px;
+                            background: $green;
+                            color: white;
+                            font-size: 1rem;
+                            font-weight: 300;
+                        }
+                    }
+                }
+                .scoreProduct{
+                    box-shadow: 0 0 10px rgba(0,0,0,.1);
+                    display: grid;
+                    grid-template-columns: auto 1fr auto;
+                    justify-content: right;
+                    grid-gap: .5rem;
+                    margin-top: 1rem;
+                    align-items: center;
+                    background: white;
+                    border-radius: 10px;
+                    padding: 1rem;
+                    border: 1px solid $border1;
+                    cursor: pointer;
+                    i{
+                        display: grid;
+                        align-items: center;
+                        svg{
+                            width: 1.4rem;
+                            height: 1.4rem;
+                        }
+                        &:last-child{
+                            svg{
+                                width: .7rem;
+                                height: .7rem;
+                            }
+                        }
+                    }
+                    span{
+                        font-size: .8rem;
+                        font-weight: 300;
+                        color: $text1;
+                        span{
+                            font-size: 1rem;
+                            font-weight: 900;
+                            color: orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

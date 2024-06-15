@@ -1,0 +1,114 @@
+.faqHome{
+    background: $widgetHome;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    border-radius: 10px;
+    padding: 1rem;
+    padding-bottom: 0;
+    margin: auto;
+    margin-top: 2rem;
+    div + div {
+        clear: both;
+    }
+    p {
+        line-height: 1.4em;
+        color: $text1;
+    }
+    .faq-title {
+        font-size: 2em;
+        margin-bottom: .5rem;
+        color: $text1;
+    }
+
+    .faq-list > div {
+        border-bottom: 0.07em solid $border1;
+        padding: 1.5em 0em;
+    }
+
+    .faq-list > div:last-child {
+        border: unset;
+    }
+
+    details > summary {
+        list-style: none;
+    }
+    details > summary::-webkit-details-marker {
+        display: none;
+    }
+
+    summary {
+        font-size: 1.4em;
+        font-weight: bold;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: $text1;
+        transition: all 0.3s ease;
+    }
+
+    summary:hover {
+        color: $green;
+    }
+
+    details[open] summary ~ * {
+        animation: sweep .5s ease-in-out;
+    }
+
+    @keyframes sweep {
+        0%    {opacity: 0; margin-right: -10px}
+        100%  {opacity: 1; margin-right: 1rem}
+    }
+
+    details[open] summary {
+        color: $green;
+    }
+
+    details[open] p {
+        border-right: 2px solid $green;
+        margin-right: 1rem;
+        padding-right: 1rem;
+        margin-top: 1rem;
+        opacity: 100;
+        transition: all 3s ease;
+    }
+
+    details[open] summary:after {
+        content: "-";
+        font-size: 3.2em;
+        margin: -33px 0.35em 0 0;
+        font-weight: 200;
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+
+    summary:after {
+        background: transparent;
+        border-radius: 0.3em;
+        content: "+";
+        color: $green;
+        float: left;
+        font-size: 1.8em;
+        font-weight: bold;
+        margin: -0.3em 0.65em 0 0;
+        padding: 0;
+        text-align: center;
+        width: 25px;
+    }
+    @media screen and (max-width: 700px) {
+        .faq-title {
+            font-size: 1.2rem;
+        }
+        summary {
+            font-size: .85rem;
+            &:after{
+                margin: 0;
+                font-size: 1rem;
+            }
+        }
+    }
+}
