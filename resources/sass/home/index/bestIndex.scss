@@ -1,0 +1,95 @@
+.bestIndex{
+    border: 1px solid $border1;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 2rem;
+    overflow: hidden;
+    background: $widgetHome;
+    box-shadow: 0 0 10px rgba(0,0,0,.05);
+    padding: 1rem;
+    .bestTitle{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        align-items: center;
+        grid-gap: .5rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        opacity: .8;
+        color: $text1;
+        svg{
+            width: 1.8rem;
+            height: 1.8rem;
+            fill: orange;
+        }
+    }
+    .slider-bestIndex{
+        .owl-carousel.owl-loaded{
+            display: grid !important;
+        }
+        button.owl-prev{
+            position: absolute;
+            right: 1rem;
+            top: 0;
+            bottom: 0;
+            span{
+                font-size: 2.5rem;
+            }
+        }
+        button.owl-next{
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            span{
+                font-size: 2.5rem;
+            }
+        }
+        .owl-dots{
+            position: absolute;
+        }
+        .bestItems{
+            a{
+                padding: 2rem 0;
+                border-bottom: 1px solid $border1;
+                display: grid;
+                transition: all 1s ease-in-out;
+                width: 0;
+                article{
+                    display: grid;
+                    grid-template-columns: auto auto 1fr;
+                    align-items: center;
+                    .pic{
+                        margin-left: .5rem;
+                        img{
+                            width: 4.5rem;
+                            height: 4.5rem;
+                            object-fit: contain;
+                        }
+                    }
+                    h4{
+                        color: #00bfd6;
+                        font-size: 1.7rem;
+                        font-weight: 900;
+                        margin-left: 1rem;
+                    }
+                    h3{
+                        color: $text1;
+                        font-size: .8rem;
+                        opacity: .7;
+                        font-weight: 300;
+                        line-height: 2rem;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                &:last-child{
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}

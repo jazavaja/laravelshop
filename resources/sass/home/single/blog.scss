@@ -1,0 +1,284 @@
+.allSingleNews{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 1rem;
+    margin: auto;
+    margin-top: 1rem;
+    .right{
+        .pic{
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 1rem;
+            background: $backHome;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .postsList{
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 1rem;
+            margin-top: 1rem;
+            background: $backHome;
+            .titleList{
+                font-size: 1rem;
+                font-weight: 500;
+                color: $text1;
+            }
+            ul{
+                li{
+                    margin-top: 1rem;
+                    overflow: hidden;
+                    transition: all .3s ease-in-out;
+                    a{
+                        display: grid;
+                        grid-template-columns: auto 1fr;
+                        grid-gap: .5rem;
+                        align-items: center;
+                        img{
+                            width: 5rem;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 3px;
+                        }
+                        .showInfo{
+                            display: grid;
+                            justify-content: right;
+                            text-align: right;
+                            align-items: center;
+                            grid-gap: .5rem;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            h4{
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                font-weight: 500;
+                                color: $text1;
+                                font-size: .8rem;
+                            }
+                            span{
+                                font-size: .7rem;
+                                color: $text1;
+                                font-weight: 300;
+                            }
+                        }
+                        &:hover{
+                            .showInfo{
+                                h4{
+                                    color: $green;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .left{
+        h1{
+            font-size: 1.7rem;
+            font-weight: 500;
+            color: $text1;
+            line-height: 3rem;
+        }
+        .leftItem{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+            padding: 1rem 0;
+            margin: 1rem 0;
+            border-top: 2px dashed $border1;
+            border-bottom: 2px dashed $border1;
+            .option{
+                h3{
+                    font-size: .9rem;
+                    font-weight: 300;
+                    color: $text1;
+                }
+                h4{
+                    font-size: .9rem;
+                    font-weight: 300;
+                    color: $text1;
+                    background: $backHome2;
+                    border-radius: 5rem;
+                    padding: .2rem .5rem;
+                }
+                a{
+                    font-size: .9rem;
+                    font-weight: 300;
+                    color: $text1;
+                    margin-top: .5rem;
+                    span{
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+        .fieldData{
+            display: flex;
+            gap: 1rem;
+            justify-content: right;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px dashed $border1;
+            .option{
+                h3{
+                    font-size: .9rem;
+                    font-weight: 300;
+                    color: $text1;
+                }
+                h5{
+                    font-size: .9rem;
+                    font-weight: 300;
+                    color: $text1;
+                    margin-top: .5rem;
+                }
+            }
+        }
+        .leftP{
+            p{
+                font-size: 1rem;
+                font-weight: 400;
+                color: $text1;
+                margin-bottom: 1rem;
+                line-height: 3rem;
+            }
+            .image{
+                display: grid;
+                justify-content: center;
+                margin: 1rem 0;
+            }
+            img{
+                object-fit: contain;
+            }
+            ul{
+                margin: 2rem;
+                li{
+                    list-style: decimal;
+                    margin-bottom: 1rem;
+                }
+                ul{
+                    margin: 0;
+                    margin-top: 1rem;
+                    margin-right: 1rem;
+                }
+            }
+            table{
+                margin: 1rem 0;
+                border: 1px solid $border1;
+                width: 100%;
+                thead{
+                    tr{
+                        background: #eee;
+                    }
+                }
+                tr{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit,minmax(1px , 1fr));
+                    align-items: center;
+                    grid-gap: 1rem;
+                    padding: 1rem;
+                    th{
+                        font-weight: 700;
+                        color: $text1;
+                        font-size: .85rem;
+                        text-align: center;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    td{
+                        font-weight: 300;
+                        font-size: .85rem;
+                        text-align: center;
+                        color: $text1;
+                        p{
+                            font-weight: 300;
+                            font-size: .85rem;
+                            text-align: center;
+                            color: $text1;
+                            margin-bottom: 0;
+                            line-height: unset;
+                        }
+                        img{
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            object-fit: cover;
+                            border-radius: 5rem;
+                            box-shadow: 0 0 10px rgba(0,0,0,.1);
+                        }
+                        a{
+                            display: grid;
+                            align-items: center;
+                            svg{
+                                margin-left: .5rem;
+                            }
+                        }
+                    }
+                    &:nth-child(even){
+                        background: #eee;
+                    }
+                }
+            }
+        }
+        video{
+            margin: 1rem 0;
+        }
+        .tags{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-gap: .5rem;
+            align-items: center;
+            background: $backHome;
+            padding: .5rem;
+            box-shadow: 0 0 5px rgba(0,0,0,.05);
+            border-radius: 5px;
+            h5{
+                font-size: .9rem;
+                font-weight: 300;
+                color: $text1;
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                justify-items: right;
+                gap: .5rem;
+                li{
+                    background: $backHome2;
+                    padding: .2rem .5rem;
+                    border-radius: 5px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    a{
+                        font-size: .8rem;
+                        font-weight: 300;
+                        color: $text1;
+                        &:hover{
+                            color: $green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    .allSingleNews{
+        display: block;
+        .right{
+            .postsList{
+                position: absolute;
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+}

@@ -1,0 +1,527 @@
+.allShowPay,.showOrder{
+    background: $backHome;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 1rem;
+    .topShowPay{
+        .title{
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            justify-content: right;
+            align-items: center;
+            grid-gap: 1rem;
+            border-bottom: 1px solid $border1;
+            padding-bottom: 1rem;
+            h2{
+                font-size: 1.2rem;
+                color: $text1;
+                font-weight: 700;
+            }
+            span{
+                font-size: .8rem;
+                font-weight: 300;
+                color: $text1;
+                opacity: .7;
+                background: $backHome2;
+                padding: .2rem 1rem;
+                border-radius: 5px;
+            }
+            button{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: right;
+                align-items: center;
+                grid-gap: .5rem;
+                font-size: .8rem;
+                color: white;
+                background: $green;
+                font-weight: 500;
+                padding: .3rem 1rem;
+                border-radius: 5px;
+                svg{
+                    fill: white;
+                    width: 1rem;
+                    height: 1rem;
+                }
+            }
+            @media screen and (max-width: 500px) {
+                h2{
+                    font-size: 1rem;
+                }
+                span{
+                    font-size: .7rem;
+                }
+            }
+        }
+        .detail{
+            .items{
+                display: grid;
+                grid-template-columns: auto auto auto auto auto;
+                justify-content: right;
+                align-items: center;
+                grid-gap: 1.5rem;
+                margin-top: 1rem;
+                .item{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: right;
+                    align-items: center;
+                    grid-gap: .5rem;
+                    h5{
+                        font-size: .8rem;
+                        font-weight: 300;
+                        color: $text1;
+                        opacity: .7;
+                    }
+                    div{
+                        font-size: .8rem;
+                        font-weight: 300;
+                        color: $text1;
+                    }
+                    .active{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: right;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        &:before{
+                            width: 10px;
+                            height: 10px;
+                            content: "";
+                            background: $green;
+                            border-radius: 5rem;
+                        }
+                    }
+                    .unActive{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: right;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        &:before{
+                            width: 10px;
+                            height: 10px;
+                            content: "";
+                            background: red;
+                            border-radius: 5rem;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 700px) {
+                .items{
+                    grid-template-columns: 1fr;
+                }
+            }
+            .topDetail{
+                border-bottom: 1px solid $border1;
+                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+            }
+            .botDetail{
+                border-bottom: 1px solid $border1;
+                padding-bottom: 1rem;
+            }
+        }
+        .trackPay{
+            border-bottom: 1px solid $border1;
+            padding: 1rem 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: .5rem;
+            span{
+                font-size: .9rem;
+                font-weight: 300;
+                color: $text1;
+                opacity: .7;
+            }
+            p{
+                border-radius: 5px;
+                background: #f5f5f5;
+                font-size: .9rem;
+                font-weight: 300;
+                color: $text1;
+                opacity: .7;
+                padding: .5rem;
+            }
+            label,h4{
+                font-size: .9rem;
+                font-weight: 500;
+                color: $text1;
+            }
+        }
+    }
+    .note{
+        padding: 1rem;
+        background: rgba(255,0,0,.1);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1rem;
+        label{
+            font-size: .8rem;
+            font-weight: 300;
+            color: red;
+            display: grid;
+        }
+        p{
+            font-size: .8rem;
+            font-weight: 300;
+            color: red;
+            text-align: left;
+        }
+    }
+    .allShowPayContainer{
+        .topContainer{
+            margin-top: 3rem;
+            padding-bottom: 3rem;
+            .level,.code{
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                grid-template-columns: auto auto;
+                margin-bottom: 3rem;
+                grid-gap: .5rem;
+                h3{
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: $text1;
+                    opacity: .7;
+                }
+                span{
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: $text1;
+                }
+            }
+            .code{
+                margin-bottom: 0;
+                margin-top: 3rem;
+            }
+            .rateItemsCount{
+                display: grid;
+                grid-template-columns: repeat(auto-fit , minmax(2rem , auto));
+                justify-content: center;
+                align-items: center;
+                .rateItemsCountItem{
+                    position: relative;
+                    height: 5px;
+                    svg{
+                        width: 1.8rem;
+                        height: 1.8rem;
+                    }
+                    .rateItemsCountItemBar{
+                        width: 5rem;
+                        height: 5px;
+                        background: $backHome2;
+                    }
+                    .rateItemsCountItemBarActive{
+                        width: 5rem;
+                        height: 5px;
+                        background: $green;
+                    }
+                    .rateItemsCountItemCircle{
+                        position: absolute;
+                        width: 3rem;
+                        height: 3rem;
+                        z-index: 2;
+                        border-radius: 50%;
+                        top: 50%;
+                        -webkit-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                        border: 2px solid $border1;
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $border1;
+                        cursor: pointer;
+                    }
+                    .rateItemsCountItemCircleActives{
+                        background-color: $green;
+                        position: absolute;
+                        width: 3rem;
+                        height: 3rem;
+                        z-index: 2;
+                        border-radius: 50%;
+                        top: 50%;
+                        -webkit-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                        border: 2px solid $backHome2;
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                    }
+                    .rateItemsCountItemCircleActive{
+                        width: 3rem;
+                        position: absolute;
+                        background: $green;
+                        height: 3rem;
+                        top: 50%;
+                        display: grid;
+                        -webkit-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                        align-items: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        border-radius: 50%;
+                        border: none;
+                        z-index: 4;
+                        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+                        cursor: pointer;
+                    }
+                    @media screen and (max-width: 500px) {
+                        .rateItemsCountItemCircleActive,.rateItemsCountItemCircleActives{
+                            width: 2.5rem;
+                            height: 2.5rem;
+                        }
+                    }
+                }
+                span{
+                    font-size: .7rem;
+                    font-weight: 300;
+                    color: $text1;
+                }
+            }
+            .cashBacks{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: center;
+                align-items: center;
+                grid-gap: 1rem;
+                margin-top: 2rem;
+                button{
+                    border: 1px solid $green;
+                    border-radius: 5px;
+                    padding: .5rem 1rem;
+                    background: white;
+                    font-size: .8rem;
+                    font-weight: 300;
+                    color: $green;
+                }
+                .active{
+                    background: $green;
+                    color: white;
+                }
+            }
+        }
+        .abilityPost{
+            background: $backHome3;
+            padding: 1rem;
+            border-radius: .2rem;
+            margin-bottom: 1rem;
+            .abilityTitle{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                grid-gap: .5rem;
+                align-items: center;
+                font-size: 1rem;
+                font-weight: 300;
+                color: $text1;
+                opacity: .7;
+            }
+            .abilityTable{
+                display: grid;
+                grid-template-columns: 1fr;
+                margin: 1rem 0;
+                box-shadow: 0 0 0 0;
+                border-radius: .3rem;
+                background: $backHome2;
+                li{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr 6.5rem;
+                    text-align: right;
+                    align-items: center;
+                    grid-gap: 1rem;
+                    background: white;
+                    padding: 0 1rem;
+                    min-height: 3.5rem;
+                    border-bottom: 0;
+                    h4{
+                        color: $text1;
+                        font-size: .8rem;
+                        opacity: .7;
+                        font-weight: 500;
+                        text-align: center;
+                    }
+                    a{
+                        display: grid;
+                        border-radius: 5px;
+                        background: $green;
+                        padding: .3rem 1rem;
+                        color: white;
+                        font-size: .8rem;
+                        font-weight: 300;
+                    }
+                    .pays{
+                        opacity: .4;
+                    }
+                    .activeF{
+                        color: red;
+                    }
+                    .activeS{
+                        color: $green;
+                    }
+                    overflow: unset;
+                    i{
+                        cursor: pointer;
+                        svg{
+                            width: 1rem;
+                            height: 1rem;
+                            fill: $text1;
+                        }
+                    }
+                    input{
+                        &:first-child{
+                            border: 1px solid $border1;
+                            padding: 0.4rem .5rem;
+                            color: $text1;
+                            border-radius: .3rem;
+                            font-size: .7rem;
+                            width: 100%;
+                            transition: all .3s ease-in-out;
+                            resize: vertical;
+                            outline: transparent;
+                            &:focus{
+                                box-shadow: 0 3px 8px 0 $border1;
+                                border: 1px solid $blue;
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        border-top: 2px solid $border1;
+                    }
+                }
+            }
+        }
+        .items{
+            background: $backHome2;
+            padding: 1rem;
+            border-radius: 10px;
+            .title{
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: $text1;
+                margin-bottom: 1rem;
+            }
+            .item{
+                padding: 1rem;
+                display: grid;
+                grid-template-columns: auto 1fr;
+                align-items: center;
+                border-radius: 10px;
+                box-shadow: 0 0 5px $border1;
+                background: $backHome;
+                margin-bottom: 1rem;
+                grid-gap: 1rem;
+                position: relative;
+                .cartDetailPic{
+                    img{
+                        width: 100%;
+                        max-width: 10rem;
+                        height: 8rem;
+                        object-fit: cover;
+                    }
+                }
+                .cartDetailInfo{
+                    .cartDetailInfoItem{
+                        margin-top: .5rem;
+                        display: grid;
+                        grid-template-columns: auto 1fr;
+                        grid-gap: .5rem;
+                        align-items: center;
+                        span{
+                            color: $text1;
+                            opacity: .7;
+                            font-size: .85rem;
+                            font-weight: 300;
+                        }
+                        i{
+                            display: grid;
+                            justify-content: center;
+                            align-items: center;
+                            svg{
+                                fill: $text1;
+                                width: 1.1rem;
+                                height: 1.1rem;
+                                opacity: .7;
+                            }
+                        }
+                        h3{
+                            font-size: 1rem;
+                            line-height: 1.375;
+                            color: $text1;
+                            font-weight: 500;
+                        }
+                        &:first-child{
+                            display: block;
+                            margin-top: 0;
+                        }
+                    }
+                    .cartCount{
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                        justify-content: left;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        color: $text1;
+                        button{
+                            display: grid;
+                            justify-content: center;
+                            align-items: center;
+                            background: red;
+                            height: 1.3rem;
+                            padding: 0 1rem;
+                            border-top-left-radius: .2rem;
+                            border-bottom-left-radius: .2rem;
+                            font-size: .8rem;
+                            color: white;
+                            &:first-child{
+                                font-size: .8rem;
+                                border-top-left-radius: 0;
+                                border-bottom-left-radius: 0;
+                                border-top-right-radius: .2rem;
+                                border-bottom-right-radius: .2rem;
+                            }
+                        }
+                    }
+                    .cartDelete{
+                        position: absolute;
+                        left: .5rem;
+                        top: .5rem;
+                        svg{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            fill: $text1;
+                        }
+                    }
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            @media screen and (max-width: 500px) {
+                .item{
+                    grid-template-columns: 1fr;
+                    .cartDetailPic{
+                        display: grid;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+    .printPay{
+        position: absolute;
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+.showOrder{
+    margin: auto;
+    margin-top: 1rem;
+    padding: 0;
+}

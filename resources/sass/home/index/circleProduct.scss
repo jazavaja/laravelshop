@@ -1,0 +1,578 @@
+.allCircleProduct{
+    margin: 2rem auto;
+    padding: 1rem;
+    padding-right: 3rem;
+    background: $widgetHome;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    .container{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: 2rem;
+        align-items: center;
+    }
+    .circle-container {
+        position: relative;
+        width: 20em;
+        height: 20em;
+        padding: 0;
+        border-radius: 50%;
+        list-style: none;
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        margin: 0;
+        border: solid 2px $green;
+        transition: all 1s ease-in-out;
+        transform: rotate(90deg);
+        > * {
+
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -2em;
+
+            &:nth-of-type(1) {
+                -moz-transform: rotate(0deg) translate(9.5em) rotate(-0deg);
+                -ms-transform: rotate(0deg) translate(9.5em) rotate(-0deg);
+                -webkit-transform: rotate(0deg) translate(9.5em) rotate(-0deg);
+                transform: rotate(0deg) translate(9.5em) rotate(-0deg);
+            }
+            &:nth-of-type(2) {
+                -moz-transform: rotate(45deg) translate(9.5em) rotate(-45deg);
+                -ms-transform: rotate(45deg) translate(9.5em) rotate(-45deg);
+                -webkit-transform: rotate(45deg) translate(9.5em) rotate(-45deg);
+                transform: rotate(45deg) translate(9.5em) rotate(-45deg);
+            }
+            &:nth-of-type(3) {
+                -moz-transform: rotate(90deg) translate(9.5em) rotate(-90deg);
+                -ms-transform: rotate(90deg) translate(9.5em) rotate(-90deg);
+                -webkit-transform: rotate(90deg) translate(9.5em) rotate(-90deg);
+                transform: rotate(90deg) translate(9.5em) rotate(-90deg);
+            }
+            &:nth-of-type(4) {
+                -moz-transform: rotate(135deg) translate(9.5em) rotate(-135deg);
+                -ms-transform: rotate(135deg) translate(9.5em) rotate(-135deg);
+                -webkit-transform: rotate(135deg) translate(9.5em) rotate(-135deg);
+                transform: rotate(135deg) translate(9.5em) rotate(-135deg);
+            }
+            &:nth-of-type(5) {
+                -moz-transform: rotate(180deg) translate(9.5em) rotate(-180deg);
+                -ms-transform: rotate(180deg) translate(109.5em) rotate(-180deg);
+                -webkit-transform: rotate(180deg) translate(9.5em) rotate(-180deg);
+                transform: rotate(180deg) translate(9.5em) rotate(-180deg);
+            }
+            &:nth-of-type(6) {
+                -moz-transform: rotate(225deg) translate(9.5em) rotate(-225deg);
+                -ms-transform: rotate(225deg) translate(9.5em) rotate(-225deg);
+                -webkit-transform: rotate(225deg) translate(9.5em) rotate(-225deg);
+                transform: rotate(225deg) translate(9.5em) rotate(-225deg);
+            }
+            &:nth-of-type(7) {
+                -moz-transform: rotate(270deg) translate(9.5em) rotate(-270deg);
+                -ms-transform: rotate(270deg) translate(9.5em) rotate(-270deg);
+                -webkit-transform: rotate(270deg) translate(9.5em) rotate(-270deg);
+                transform: rotate(270deg) translate(9.5em) rotate(-270deg);
+            }
+            &:nth-of-type(8) {
+                -moz-transform: rotate(315deg) translate(9.5em) rotate(-315deg);
+                -ms-transform: rotate(315deg) translate(9.5em) rotate(-315deg);
+                -webkit-transform: rotate(315deg) translate(9.5em) rotate(-315deg);
+                transform: rotate(315deg) translate(9.5em) rotate(-315deg);
+            }
+        }
+        a {
+            display: block;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px $green;
+            background: $backHome2;
+            height: 64px;
+            width: 64px;
+            font-size: 250%;
+            overflow: hidden;
+        }
+        i {
+            display:block;
+            padding: 10px;
+            box-sizing: border-box;
+            vertical-align: middle;
+            text-align: center;
+            border-radius: 50%;
+        }
+        .active a{
+            background: linear-gradient(to right, green , #54ff54);
+        }
+        &:before {
+            content: 'دسته بندی';
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            text-align: center;
+            width: 70%;
+            font-size: 27px;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            line-height: 1;
+            display: block;
+            margin-top: -10px;
+            color: $text1;
+            font-weight: 300;
+        }
+    }
+
+    .services-container li {
+        display: none;
+        &.active {
+            display: block;
+        }
+        .service-item{
+            .titleCat{
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: $text1;
+                margin-bottom: 1rem;
+            }
+            .containerItems{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                a{
+                    display: grid;
+                    border: 1px solid $border1;
+                    border-right: 0;
+                    position: relative;
+                    overflow: hidden;
+                    min-height: 22.5rem;
+                    .pic{
+                        position: relative;
+                        display: grid;
+                        justify-content: center;
+                        padding: 0 1rem;
+                        img{
+                            margin-top: 1rem;
+                            width: 100%;
+                            height: 16rem;
+                            object-fit: contain;
+                            transition: all .3s ease-in-out;
+                            &:nth-child(2){
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                right: 0;
+                                left: 0;
+                                opacity: 0;
+                            }
+                        }
+                        .lotteryStatus{
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            z-index: 5;
+                            transition: all .3s ease-in-out;
+                            svg{
+                                width: 5rem;
+                                height: 5rem;
+                            }
+                        }
+                        .allRateProduct{
+                            padding: .5rem;
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            justify-content: center;
+                            gap: .5rem;
+                            opacity: 0;
+                            position: absolute;
+                            top: 80%;
+                            right: 0;
+                            left: 0;
+                            background: white;
+                            box-shadow: 0 0 10px rgba(0,0,0,.1);
+                            transition: all .3s ease-in-out;
+                            .rateItem1{
+                                .rateTitle{
+                                    font-size: .7rem;
+                                    font-weight: 500;
+                                    color: $text1;
+                                    text-align: center;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    margin-bottom: .5rem;
+                                }
+                                .rateBody{
+                                    background: $backHome3;
+                                    border-radius: 5px;
+                                    font-size: .7rem;
+                                    font-weight: 300;
+                                    color: $text1;
+                                    min-width: 3.5rem;
+                                    padding: .3rem 0;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                    .colors{
+                        padding: 0 .5rem;
+                        position: absolute;
+                        bottom: 0;
+                        right: .5rem;
+                        display: flex;
+                        justify-content: right;
+                        gap: .5rem;
+                        transition: all .3s ease-in-out;
+                        .color{
+                            width: 1rem;
+                            height: 1rem;
+                            border-radius: 100%;
+                            margin-bottom: .5rem;
+                            border: 2px solid $backHome;
+                            box-shadow: 0px 2px 4px rgba(0,0,0,.2);
+                        }
+                    }
+                    .options{
+                        .optionItem{
+                            position: absolute;
+                            left: -.5rem;
+                            top: .5rem;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all .3s ease-in-out;
+                            margin-bottom: .5rem;
+                            z-index: 20;
+                            svg{
+                                width: 1.4rem;
+                                height: 1.4rem;
+                                fill: #707070;
+                            }
+                            &:nth-child(2){
+                                transition: all .4s ease-in-out;
+                                top: 3rem;
+                            }
+                            &:nth-child(3){
+                                transition: all .5s ease-in-out;
+                                top: 5.5rem;
+                            }
+                            &:nth-child(4){
+                                transition: all .5s ease-in-out;
+                                top: 8rem;
+                            }
+                        }
+                    }
+                    h3{
+                        font-size: .95rem;
+                        font-weight: 300;
+                        color: $text1;
+                        line-height: 1.7rem;
+                        text-align: right;
+                        margin: .8rem .5rem;
+                        height: 3.2rem;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                    }
+                    .price{
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        text-align: left;
+                        height: 3rem;
+                        padding: 0 1rem;
+                        .off{
+                            display: flex;
+                            justify-content: left;
+                            gap: .3rem;
+                            align-items: center;
+                            s{
+                                font-size: .85rem;
+                                font-weight: 500;
+                                color: $text1;
+                                opacity: .6;
+                            }
+                            .offProduct{
+                                position: absolute;
+                                top: .5rem;
+                                z-index: 2;
+                                right: .5rem;
+                                .offProductItem{
+                                    position: relative;
+                                    svg{
+                                        width: 2.5rem;
+                                        height: 2.5rem;
+                                        fill: red;
+                                        animation: off-anim 1s ease-in-out infinite;
+                                        @keyframes off-anim {
+                                            0% {
+                                                width: 2.5rem;
+                                                height: 2.5rem;
+                                            }
+                                            50% {
+                                                width: 2.8rem;
+                                                height: 2.8rem;
+                                            }
+                                            100% {
+                                                width: 2.5rem;
+                                                height: 2.5rem;
+                                            }
+                                        }
+                                    }
+                                    div{
+                                        position: absolute;
+                                        top: 0;
+                                        right: 0;
+                                        left: 0;
+                                        bottom: 0;
+                                        display: grid;
+                                        justify-content: center;
+                                        align-items: center;
+                                        span{
+                                            font-size: .9rem;
+                                            font-weight: 300;
+                                            color: white;
+                                            display: grid;
+                                            margin-bottom: 2px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        h5{
+                            font-size: 1rem;
+                            font-weight: 900;
+                            color: $text1;
+                        }
+                    }
+                    .note{
+                        background: rgba(255, 255, 0, 0.1);
+                        padding: .5rem;
+                        height: 4rem;
+                        margin-top: .5rem;
+                        display: grid;
+                        align-items: center;
+                        h4{
+                            text-align: center;
+                            color: orangered;
+                        }
+                    }
+                    .countdown {
+                        text-align: center;
+                        direction: ltr;
+                        border-top: 1px solid $border1;
+                        padding: .5rem 0;
+                        height: 4rem;
+                        margin-top: .5rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .countdown-section {
+                            display: inline-block;
+                            width: 50px;
+                            .countdown-time {
+                                background-color: $backHome3;
+                                border-radius: 50%;
+                                color: $text1;
+                                display: block;
+                                height: 40px;
+                                line-height: 40px;
+                                margin: auto;
+                                width: 40px;
+                            }
+                            &:last-child{
+                                .countdown-time {
+                                    background-color: $green;
+                                    color: white;
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                    .optionDown{
+                        display: grid;
+                        grid-template-columns: 1fr auto;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        border-top: 1px solid $border1;
+                        padding: .5rem;
+                        height: 4rem;
+                        margin-top: .5rem;
+                        .optionItem{
+                            display: flex;
+                            align-items: center;
+                            gap: .5rem;
+                            padding: .5rem;
+                            background: $green;
+                            font-size: .9rem;
+                            font-weight: 300;
+                            color: white;
+                            height: 2.5rem;
+                            border-radius: 5px;
+                            position: relative;
+                            svg{
+                                width: 1.2rem;
+                                height: 1.2rem;
+                                fill: white;
+                            }
+                            &:first-child{
+                                border: 2px solid $green;
+                                &:before{
+                                    content: "";
+                                    background-image: linear-gradient(-45deg, rgba(255, 255, 255, .1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%, transparent 75%, transparent);
+                                    position: absolute;
+                                    inset: 0;
+                                }
+                            }
+                            &:last-child{
+                                justify-content: center;
+                                background: gray;
+                                width: 2.5rem;
+                                svg{
+                                    width: 1rem;
+                                    height: 1rem;
+                                    fill: white;
+                                }
+                            }
+                        }
+                    }
+                    .emptyProduct{
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 0;
+                            left: 0;
+                            z-index: 20;
+                            background: rgba(0,0,0,.3);
+                        }
+                        &:before{
+                            z-index: 30;
+                            height: 2.5rem;
+                            width: 100%;
+                            background: red;
+                            color: white;
+                            text-align: center;
+                            display: grid;
+                            align-items: center;
+                            font-size: 1rem;
+                            content: "ناموجود";
+                            box-shadow: 0 0 10px rgba(0 ,0,0,.3);
+                        }
+                    }
+                    .preProduct{
+                        &:before{
+                            z-index: 30;
+                            height: 2.5rem;
+                            width: 100%;
+                            background: green;
+                            color: white;
+                            text-align: center;
+                            display: grid;
+                            align-items: center;
+                            font-size: 1rem;
+                            content: "پیش خرید";
+                            box-shadow: 0 0 10px rgba(0 ,0,0,.3);
+                        }
+                    }
+                    @media screen and (max-width: 800px) {
+                        .pic{
+                            img{
+                                height: 8rem !important;
+                            }
+                        }
+                        h3{
+                            font-size: .85rem;
+                        }
+                        .optionDown{
+                            .optionItem{
+                                font-size: .7rem;
+                                svg{
+                                    width: .8rem;
+                                    height: .8rem;
+                                }
+                                &:last-child{
+                                    width: 2rem;
+                                    svg{
+                                        width: .8rem;
+                                        height: .8rem;
+                                    }
+                                }
+                            }
+                        }
+                        .countdown {
+                            .countdown-section {
+                                width: 40px;
+                                .countdown-time {
+                                    height: 30px;
+                                    line-height: 30px;
+                                    width: 30px;
+                                    font-size: .7rem;
+                                }
+                                &:last-child{
+                                    .countdown-time {
+                                        font-size: .7rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                        .pic{
+                            img{
+                                opacity: 0;
+                                &:nth-child(2){
+                                    opacity: 1;
+                                }
+                            }
+                            .lotteryStatus{
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+                            .allRateProduct{
+                                opacity: 1;
+                                top: 77%;
+                            }
+                        }
+                        .options{
+                            .optionItem{
+                                opacity: 1;
+                                visibility: visible;
+                                left: .7rem;
+                            }
+                        }
+                        .colors{
+                            opacity: 0;
+                        }
+                    }
+                    &:first-child{
+                        border-right: 1px solid $border1;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .circle-container {transform:scale(0.5)}
+    }
+}
+@media screen and (max-width: 700px) {
+    .allCircleProduct{
+        padding-right: 0;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        top: 0;
+        right: 0;
+        .container{
+            display: block;
+            .service-item{
+                .containerItems{
+                    display: block !important;
+                }
+            }
+        }
+    }
+}

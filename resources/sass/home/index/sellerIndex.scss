@@ -1,0 +1,117 @@
+.sellerIndex{
+    margin: auto;
+    margin-top: 2rem;
+    background: $widgetHome;
+    padding: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    h3{
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-align: center;
+        background: linear-gradient(to right, $text1 20%, $green 40%, $green 60%, $text1 80%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        animation: shine 1s linear infinite;
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+    }
+    p{
+        font-size: 1rem;
+        font-weight: 300;
+        text-align: center;
+        color: $text1;
+    }
+    .slider-sellers{
+        margin-top: 1rem;
+        .owl-stage-outer{
+            padding: 0 1rem;
+        }
+        button.owl-prev{
+            position: absolute;
+            right: 1rem;
+            top: 0;
+            bottom: 0;
+            span{
+                font-size: 2.5rem;
+            }
+        }
+        button.owl-next{
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            span{
+                font-size: 2.5rem;
+            }
+        }
+        .owl-dots{
+            position: absolute;
+        }
+        .sellerIndexItem{
+            padding: .5rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            grid-gap: .5rem;
+            margin: .5rem 0;
+            background: $backHome;
+            .right{
+                position: relative;
+                img{
+                    width: 4.5rem;
+                    height: 4.5rem;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+                span{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: $green;
+                    border-radius: 50%;
+                    color: white;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    font-size: .8rem;
+                    font-weight: 300;
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .left{
+                h4{
+                    font-size: .9rem;
+                    font-weight: 500;
+                    color: $text1;
+                }
+                h5{
+                    font-size: .8rem;
+                    font-weight: 300;
+                    color: $text1;
+                    opacity: .7;
+                    margin-top: .5rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .slider-sellers{
+            article{
+                margin: 0 1rem;
+            }
+            .owl-stage-outer{
+                padding: 0;
+            }
+        }
+    }
+}

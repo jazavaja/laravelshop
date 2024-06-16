@@ -1,0 +1,197 @@
+.allStoryContainer{
+    margin: auto;
+    margin-top: 2rem;
+    .allStoryIndex{
+        border-radius: 10px;
+        overflow: hidden;
+        background: $widgetHome;
+        box-shadow: 0 0 10px rgba(0,0,0,.05);
+        padding: 1rem;
+        .titleStory{
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $text1;
+            margin-bottom: 2rem;
+        }
+        .storyItems{
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            .storyItem{
+                cursor: pointer;
+                .storyPic{
+                    border-radius: 50%;
+                    padding: 1px;
+                    background: linear-gradient(to right, red 20%, #FF0 40%, #FF0 60%, red 80%);
+                    background-size: 200% auto;
+                    animation: shine 1s linear infinite;
+                    overflow: hidden;
+                    box-shadow: 0 0 10px rgba(0,0,0,.3);
+                    @keyframes shine {
+                        to {
+                            background-position: 200% center;
+                        }
+                    }
+                    img{
+                        width: 0;
+                        height: 0;
+                        object-fit: cover;
+                        background: white;
+                        border-radius: 50%;
+                        transition: all .8s ease-in-out;
+                    }
+                }
+                .unActive{
+                    background: $backHome3;
+                }
+            }
+        }
+        @media screen and (max-width: 800px) {
+            .storyItems{
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                .storyItem{
+                    .storyPic{
+                        padding: 2px;
+                        img{
+                            width: 5rem;
+                            height: 5rem;
+                        }
+                    }
+                }
+            }
+        }
+        .storyFixed{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            background: hsla(0,0%,52.9%,.5);
+            z-index: 999;
+            .storyShow{
+                width: 30%;
+                margin: auto;
+                background: $backHome;
+                display: grid;
+                grid-template-columns: 1fr;
+                .owl-carousel.owl-stage::after {
+                    position: absolute;
+                }
+                .owl-carousel.owl-loaded{
+                    display: grid !important;
+                }
+                button.owl-prev{
+                    position: absolute;
+                    right: -3rem;
+                    top: 0;
+                    bottom: 0;
+                    span{
+                        font-size: 2.5rem;
+                    }
+                }
+                button.owl-next{
+                    position: absolute;
+                    left: -3rem;
+                    top: 0;
+                    bottom: 0;
+                    span{
+                        font-size: 2.5rem;
+                    }
+                }
+                .owl-dots{
+                    position: absolute;
+                }
+                .storyItem{
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    img,video{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            @media screen and (max-width: 800px) {
+                .storyShow{
+                    width: 90%;
+                    button.owl-prev{
+                        right: 0;
+                        bottom: auto;
+                        top: -4rem;
+                    }
+                    button.owl-next{
+                        left: 0;
+                        bottom: auto;
+                        top: -4rem;
+                    }
+                    .storyItem{
+                        display: block;
+                        img,video{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .downStory{
+        display: grid;
+        justify-content: center;
+        .data{
+            position: relative;
+        }
+        .downData{
+            position: absolute;
+            right: 0;
+            left: 0;
+            justify-content: center;
+            display: grid;
+            align-items: center;
+            svg{
+                width: 1rem;
+                height: 1rem;
+                margin-bottom: 3rem;
+                fill: red;
+                animation: downAn 1s linear infinite;
+                @keyframes downAn {
+                    0% {
+                        width: 1rem;
+                        height: 1rem;
+                        margin-bottom: 2rem;
+                    }
+                    50% {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        margin-bottom: 0;
+                    }
+                    100% {
+                        width: 1rem;
+                        height: 1rem;
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+        i{
+            svg{
+                width: 10rem;
+                height: 3rem;
+                fill: $widgetHome;
+                path{
+                    fill: $widgetHome;
+                }
+            }
+        }
+    }
+}

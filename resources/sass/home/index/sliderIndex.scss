@@ -1,0 +1,268 @@
+.allSliderIndex{
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 3rem;
+  background: $widgetHome;
+  box-shadow: 0 0 10px rgba(0,0,0,.05);
+  position: relative;
+  overflow: hidden;
+  .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+    h3{
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: $green;
+      background: $widgetHome;
+      padding: 1rem;
+      z-index: 2;
+    }
+    a{
+      font-size: 1rem;
+      font-weight: 500;
+      color: lighten($text1,50);
+      background: $widgetHome;
+      position: relative;
+      padding: 1rem;
+      z-index: 2;
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: 1.5px;
+      background: $text1;
+      width: 100%;
+      z-index: 1;
+      opacity: .05;
+    }
+  }
+  .owl-carousel.owl-loaded{
+    display: grid !important;
+  }
+  button.owl-prev{
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    bottom: 0;
+    span{
+      font-size: 2.5rem;
+    }
+  }
+  button.owl-next{
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    span{
+      font-size: 2.5rem;
+    }
+  }
+  .owl-dots{
+    position: absolute;
+  }
+  .slider-products{
+    .owl-item{
+      padding: .5rem;
+    }
+    a{
+      display: grid;
+      position: relative;
+      overflow: hidden;
+      min-height: 22.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      .pic{
+        display: grid;
+        justify-content: center;
+        padding: 0 1rem;
+        position: relative;
+        img{
+          width: 100%;
+          height: 9rem;
+          margin-top: 1rem;
+          object-fit: contain;
+          transition: all .3s ease-in-out;
+          &:nth-child(2){
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            opacity: 0;
+          }
+        }
+      }
+      h3{
+        font-size: 1rem;
+        font-weight: 300;
+        color: $text1;
+        line-height: 1.7rem;
+        text-align: center;
+        margin: .8rem .5rem;
+        height: 3.2rem;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        transition: all .3s ease-in-out;
+      }
+      .price{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-gap: .5rem;
+        padding: 1rem;
+        position: relative;
+        s{
+          font-size: .8rem;
+          font-weight: 500;
+          color: $text1;
+          opacity: .6;
+        }
+        h5{
+          font-size: 1rem;
+          font-weight: 900;
+          color: $green;
+        }
+        &:before{
+          content: "";
+          position: absolute;
+          left: 0;
+          height: 1.5rem;
+          width: .5rem;
+          background: $green;
+          border-radius: 20px;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+      .addCartSlide{
+        position: absolute;
+        bottom: -10rem;
+        right: 0;
+        left: 0;
+        padding: .8rem;
+        background: $backHome;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        border-top: 1px solid $border1;
+        .showAddData{
+          background: $green;
+          border-radius: 10px;
+          padding: .5rem;
+          box-shadow: 0 5px 5px rgba(0,0,0,.3);
+          .adds{
+            margin-bottom: .5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+            font-size: .9rem;
+            font-weight: 300;
+            color: white;
+            button{
+              background: white;
+              width: 1.5rem;
+              height: 1.5rem;
+              display: grid;
+              align-items: center;
+              justify-content: center;
+              color: $text1;
+              border-radius: 5px;
+            }
+          }
+          .addData{
+            display: flex;
+            justify-content: center;
+            gap: .5rem;
+            align-items: center;
+            font-size: .8rem;
+            font-weight: 300;
+            color: white;
+            i{
+              display: grid;
+              align-items: center;
+              svg{
+                width: 1rem;
+                height: 1rem;
+                fill: white;
+              }
+            }
+          }
+        }
+      }
+      .emptyProduct{
+        &:after{
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          z-index: 20;
+          background: rgba(0,0,0,.3);
+        }
+        &:before{
+          z-index: 30;
+          height: 2.5rem;
+          width: 100%;
+          background: red;
+          color: white;
+          text-align: center;
+          display: grid;
+          align-items: center;
+          font-size: 1rem;
+          content: "ناموجود";
+          box-shadow: 0 0 10px rgba(0 ,0,0,.3);
+        }
+      }
+      &:hover{
+        .pic{
+          img{
+            opacity: 0;
+            &:nth-child(2){
+              opacity: 1;
+            }
+          }
+        }
+        h3{
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+        }
+        .addCartSlide{
+          bottom: 0;
+          opacity: 1;
+        }
+      }
+    }
+    @media screen and (max-width: 800px) {
+      a{
+        min-height: auto;
+        .pic{
+          img{
+            height: 8rem !important;
+          }
+        }
+        h3{
+          font-size: .85rem;
+        }
+        .price{
+          s{
+            font-size: .6rem;
+          }
+          h5{
+            font-size: .75rem;
+          }
+        }
+      }
+    }
+  }
+}

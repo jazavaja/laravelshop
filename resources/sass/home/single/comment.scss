@@ -1,0 +1,440 @@
+.allComment{
+    padding: 1rem;
+    h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $text1;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: right;
+        align-items: center;
+        grid-gap: .5rem;
+        i{
+            display: grid;
+            align-items: center;
+            svg{
+                width: 1.8rem;
+                height: 1.8rem;
+                fill: $green;
+            }
+        }
+    }
+    .btnComment{
+        margin-top: 1rem;
+        h4{
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: $text1;
+            opacity: .7;
+        }
+        p{
+            font-size: .9rem;
+            font-weight: 300;
+            color: $text1;
+            opacity: .7;
+        }
+        .showAdd{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: right;
+            align-items: center;
+            grid-gap: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            overflow: hidden;
+            background: $green;
+            box-shadow: -46px 0px 0px 0px rgba(0, 0, 0, 0.12) inset;
+            padding: 0 .8rem;
+            transition: all .3s ease-in-out;
+            cursor: pointer;
+            width: 12rem;
+            i {
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                svg {
+                    width: 1.3rem;
+                    height: 1.3rem;
+                    fill: white;
+                }
+            }
+            button {
+                font-size: 1rem;
+                color: #fff;
+                font-weight: 300;
+                overflow: hidden;
+                text-align: center;
+                padding: .5rem;
+                background: transparent;
+            }
+            &:hover {
+                box-shadow: -200px 0px 0px 0px rgba(0, 0, 0, 0.12) inset;
+            }
+        }
+    }
+    .addComments{
+        display: none;
+        margin-top: 1rem;
+        .addComment{
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-gap: 1rem;
+            .right{
+                .alert{
+                    color: red;
+                    font-size: .8rem;
+                    font-weight: 300;
+                }
+                .sendCommentItem{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: .5rem;
+                    margin-top: 1rem;
+                    input{
+                        padding: .5rem;
+                        border: 1px solid $border1;
+                        border-radius: .2rem;
+                        width: 100%;
+                        transition: all .3s ease-in-out;
+                        font-size: .75rem;
+                        font-weight: 300;
+                    }
+                    textarea{
+                        padding: .5rem;
+                        border: 1px solid $border1;
+                        border-radius: 5px;
+                        width: 100%;
+                        outline-style: unset;
+                        transition: all .3s ease-in-out;
+                        font-size: .75rem;
+                        font-weight: 300;
+                        height: 10rem;
+                        resize: vertical;
+                    }
+                    .sendCommentItemTitle{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: right;
+                        grid-gap: .5rem;
+                        align-items: center;
+                        i{
+                            display: grid;
+                            justify-content: center;
+                            align-items: center;
+                            svg{
+                                fill: orange;
+                                width: .6rem;
+                                height: .6rem;
+                            }
+                        }
+                    }
+                    label{
+                        font-size: .95rem;
+                        line-height: 1.692;
+                        color: $text1;
+                        position: relative;
+                        i{
+                            position: absolute;
+                            left: 1rem;
+                            top: 0;
+                            bottom: 0;
+                            display: grid;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            svg{
+                                width: 1.2rem;
+                                height: 1.2rem;
+                            }
+                        }
+                    }
+                    span{
+                        margin-top: .5rem;
+                        width: 100%;
+                        border: 1px solid $green;
+                        background: #EDF6F7;
+                        position: relative;
+                        padding: .5rem;
+                        color: $green;
+                        border-radius: 5px;
+                        i{
+                            position: absolute;
+                            left: 1rem;
+                            top: 0;
+                            bottom: 0;
+                            display: grid;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            svg{
+                                width: 1rem;
+                                height: 1rem;
+                            }
+                        }
+                    }
+                }
+                #badContainer{
+                    span{
+                        border: 1px solid red;
+                        background: #F7EDED;
+                        color: red;
+                    }
+                }
+                .rates{
+                    display: grid;
+                    grid-template-columns: auto 1fr;
+                    align-items: center;
+                    grid-gap: 1rem;
+                    h4{
+                        font-size: .95rem;
+                        color: $text1;
+                        font-weight: 500;
+                    }
+                    .rateItem{
+                        direction: ltr;
+                    }
+                }
+            }
+            .left{
+                padding: 1rem;
+                border-radius: 10px;
+                border: 1px solid $border1;
+                width: 30rem;
+                position: sticky;
+                top: 1rem;
+                .titlePost{
+                    margin-top: 0;
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+                h5{
+                    font-size: 1rem;
+                    font-weight: 300;
+                    color: #45BFEC;
+                }
+                ul{
+                    li{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: right;
+                        grid-gap: .5rem;
+                        font-size: .9rem;
+                        font-weight: 300;
+                        color: $text1;
+                        line-height: 2rem;
+                        margin-top: 1rem;
+                        align-items: center;
+                        &:before{
+                            content: "";
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 100%;
+                            background: #707070;
+                        }
+                    }
+                }
+                .allCommentButtons{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    align-items: center;
+                    grid-gap: 1rem;
+                    margin-top: 1rem;
+                    button{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        background: green;
+                        padding: .5rem 1rem;
+                        border-radius: .2rem;
+                        i{
+                            display: grid;
+                            justify-content: center;
+                            align-items: center;
+                            svg{
+                                fill: white;
+                                width: 1rem;
+                                height: 1rem;
+                            }
+                        }
+                        img{
+                            width: 4rem;
+                            height: 1rem;
+                            object-fit: cover;
+                        }
+                        &:last-child{
+                            display: block;
+                            background: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .showComments{
+        border-top: 1px solid $border1;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        h5 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: $text1;
+            margin-bottom: 2rem;
+        }
+        .getCommentItem{
+            border-bottom: 1px solid $border1;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            display: grid;
+            grid-template-columns: 13rem 1fr;
+            grid-gap: 2rem;
+            .rightComment{
+                .topRight{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: right;
+                    align-items: center;
+                    grid-gap: .5rem;
+                    margin-bottom: 1rem;
+                    h4{
+                        font-size: 1.1rem;
+                        font-weight: 700;
+                        color: $text1;
+                    }
+                    span{
+                        font-size: .8rem;
+                        font-weight: 300;
+                        color: $text1;
+                        background: #F1F4F9;
+                        border-radius: 5px;
+                        padding: .1rem .5rem;
+                        opacity: .6;
+                    }
+                }
+                .botRight{
+                    h5{
+                        font-size: .85rem;
+                        font-weight: 700;
+                        color: orange;
+                        letter-spacing: .5px;
+                        margin-bottom: 0;
+                    }
+                    .rates{
+                        display: grid;
+                        grid-template-columns: repeat(5,auto);
+                        justify-content: right;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        margin-top: .5rem;
+                        .rateItem{
+                            -webkit-transform: scaleX(-1);
+                            transform: scaleX(-1);
+                        }
+                    }
+                }
+            }
+            .leftComment{
+                .allCommentTitle{
+                    font-size: 1rem;
+                    font-weight: 300;
+                    color: $text1;
+                    padding: .5rem;
+                    border-radius: 5px;
+                    background: #f9f9f9;
+                    margin-bottom: 1rem;
+                }
+                .allCommentBody{
+                    p{
+                        font-size: .85rem;
+                        font-weight: 500;
+                        color: $text1;
+                        line-height: 1.7rem;
+                        opacity: .6;
+                    }
+                }
+                .getCommentDatas{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    grid-gap: 1rem;
+                }
+                .getCommentData{
+                    margin-top: 2rem;
+                    h5{
+                        font-size: .9rem;
+                        font-weight: 500;
+                        color: $text1;
+                        letter-spacing: 1px;
+                        margin-bottom: .5rem;
+                    }
+                    .items{
+                        display: grid;
+                        grid-gap: .5rem;
+                        .item{
+                            display: grid;
+                            grid-template-columns: auto 1fr;
+                            justify-content: right;
+                            align-items: center;
+                            grid-gap: .5rem;
+                            color: $text1;
+                            font-weight: 300;
+                            font-size: .8rem;
+                            opacity: .7;
+                            i{
+                                display: grid;
+                                justify-content: center;
+                                align-items: center;
+                                svg{
+                                    fill: $green;
+                                    width: .5rem;
+                                    height: .5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .bad{
+                    .items{
+                        .item{
+                            i{
+                                svg{
+                                    fill: red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:last-child{
+                border-bottom: 0;
+            }
+        }
+        .emptyComment{
+            font-size: 1rem;
+            font-weight: 500;
+            color: red;
+            opacity: .7;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .addComments{
+            .addComment{
+                display: block;
+                .left{
+                    width: auto;
+                }
+            }
+        }
+        .showComments{
+            .getCommentItem{
+                display: block;
+                .leftComment{
+                    margin-top: 1rem;
+                    .getCommentDatas{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

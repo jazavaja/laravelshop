@@ -1,0 +1,110 @@
+.collectionIndex{
+    margin: auto;
+    margin-top: 2rem;
+    .collectionTitle{
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $text1;
+        margin-bottom: .5rem;
+    }
+    .owl-carousel.owl-loaded{
+        display: grid !important;
+    }
+    button.owl-prev{
+        position: absolute;
+        right: 1rem;
+        top: 0;
+        bottom: 0;
+        span{
+            font-size: 2.5rem;
+        }
+    }
+    button.owl-next{
+        position: absolute;
+        left: 1rem;
+        top: 0;
+        bottom: 0;
+        span{
+            font-size: 2.5rem;
+        }
+    }
+    .owl-dots{
+        position: absolute;
+    }
+    .owl-stage-outer{
+        padding: .5rem;
+    }
+    .collectionItems{
+        background: $backHome;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 1rem;
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        .topCollect{
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: $text1;
+            margin-bottom: 1rem;
+        }
+        .collectProducts{
+            display: flex;
+            a{
+                display: flex;
+                flex-wrap: wrap;
+                .pic{
+                    display: grid;
+                    justify-content: center;
+                    img{
+                        width: 100%;
+                        height: 10rem;
+                        object-fit: contain;
+                    }
+                }
+                h4{
+                    font-size: .85rem;
+                    font-weight: 300;
+                    color: $text1;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                }
+                &:last-child{
+                    margin-right: .5rem;
+                }
+                &:first-child{
+                    margin-left: .5rem;
+                }
+            }
+        }
+        .botCollect{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-gap: .5rem;
+            margin-top: 2rem;
+            h5{
+                font-size: 1rem;
+                font-weight: 500;
+                color: $green;
+                opacity: .7;
+            }
+            a{
+                font-size: .8rem;
+                font-weight: 300;
+                color: $text1;
+                opacity: .7;
+                display: flex;
+                grid-template-columns: auto auto;
+                justify-content: left;
+                align-items: center;
+                grid-gap: .5rem;
+                svg{
+                    width: .8rem;
+                    height: .8rem;
+                    fill: $text1;
+                }
+            }
+        }
+    }
+}

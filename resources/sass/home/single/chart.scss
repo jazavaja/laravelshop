@@ -1,0 +1,45 @@
+.allChartPrice{
+    background: rgba(0,0,0,.5);
+    z-index: 4000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    .showCharts{
+        width: 50%;
+        margin: auto;
+        background: $backHome;
+        display: grid;
+        grid-template-columns: 1fr;
+        border-radius: .4rem;
+        overflow: hidden;
+        padding: 2rem;
+        position: relative;
+        .closeChart{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: .5rem;
+            top: .5rem;
+            height: 2rem;
+            cursor: pointer;
+            svg{
+                width: 2rem;
+                height: 2rem;
+                fill: $text1;
+            }
+        }
+        .chartPrice{
+            text-align: center;
+            font-size: .9rem;
+            font-weight: 300;
+            color: $text1;
+            margin-bottom: 1rem;
+        }
+    }
+}

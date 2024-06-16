@@ -1,0 +1,193 @@
+.advanceProduct{
+    margin: auto;
+    margin-top: 2rem;
+    .title{
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $text1;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid $border1;
+    }
+    .owl-carousel{
+        .owl-stage-outer{
+            padding: 1rem 0;
+        }
+        button.owl-prev{
+            position: absolute;
+            right: 1rem;
+            top: 0;
+            bottom: 0;
+            span{
+                font-size: 2.5rem;
+            }
+        }
+        button.owl-next{
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            span{
+                font-size: 2.5rem;
+            }
+        }
+        .owl-dots{
+            position: absolute;
+        }
+        .advanceProductItem{
+            background: $widgetHome;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            padding: 1rem;
+            display: grid;
+            .top{
+                display: grid;
+                grid-template-columns: auto 1fr;
+                grid-gap: 1rem;
+                .advanceRight{
+                    h3{
+                        font-size: 1rem;
+                        font-weight: 500;
+                        color: $text1;
+                        margin-bottom: .5rem;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                    }
+                    p{
+                        font-size: .75rem;
+                        font-weight: 300;
+                        color: $text1;
+                        opacity: .7;
+                        line-height: 2rem;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                    }
+                    .advanceOptions{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        align-items: center;
+                        grid-gap: 5px;
+                        justify-content: space-between;
+                        margin: .5rem 0;
+                        .productStatus{
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            justify-content: right;
+                            align-items: center;
+                            grid-gap: 5px;
+                            span{
+                                font-size: .75rem;
+                                font-weight: 300;
+                                color: $text1;
+                            }
+                            .active{
+                                color: $green;
+                            }
+                            .unActive{
+                                color: $red;
+                            }
+                        }
+                        .starProduct{
+                            display: grid;
+                            grid-template-columns: auto auto auto;
+                            justify-content: right;
+                            align-items: center;
+                            grid-gap: 5px;
+                            svg{
+                                width: 1rem;
+                                height: 1rem;
+                            }
+                        }
+                    }
+                }
+                .advanceLeft{
+                    .pic{
+                        background: $backHome2;
+                        padding: .5rem;
+                        border-radius: 5px;
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                        img{
+                            width: 10rem;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+            .bot{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 1rem;
+                border-top: 1px solid $border1;
+                margin-top: .5rem;
+                .options{
+                    display: grid;
+                    grid-template-columns: repeat(4,auto);
+                    justify-content: center;
+                    align-items: center;
+                    grid-gap: 1rem;
+                    opacity: .5;
+                    .optionItem{
+                        cursor: pointer;
+                        svg{
+                            width: 1.4rem;
+                            height: 1.4rem;
+                            fill: $text1;
+                        }
+                    }
+                }
+                .price{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    align-items: center;
+                    justify-content: left;
+                    grid-gap: .8rem;
+                    .off{
+                        display: flex;
+                        justify-content: left;
+                        gap: .3rem;
+                        align-items: center;
+                        s{
+                            font-size: .8rem;
+                            font-weight: 500;
+                            color: $text1;
+                            opacity: .6;
+                        }
+                        .offData{
+                            font-size: .7rem;
+                            font-weight: 300;
+                            color: white;
+                            background: red;
+                            padding: 0 .3rem;
+                            border-radius: 5px;
+                            box-shadow: 0 0 5px rgba(0,0,0,.5);
+                        }
+                    }
+                    h5{
+                        display: grid;
+                        justify-content: left;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        font-size: 16px;
+                        font-weight: 900;
+                        color: $green;
+                    }
+                }
+            }
+            @media screen and (max-width: 700px) {
+                .top{
+                    display: block;
+                }
+            }
+        }
+    }
+}

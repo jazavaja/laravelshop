@@ -1,0 +1,37 @@
+.allCategoriesIndex{
+    margin: auto;
+    margin-top: 1rem;
+    h1{
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $text2;
+    }
+    ul{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(10rem , 1fr));
+        grid-gap: 1rem;
+        margin-top: 2rem;
+        li{
+            padding: .5rem;
+            background: $backHome;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            border-radius: 1rem;
+            .pic{
+                img{
+                    width: 100%;
+                    height: 5rem;
+                    object-fit: contain;
+                }
+            }
+            h3{
+                font-size: .85rem;
+                font-weight: 500;
+                text-align: center;
+                color: $text2;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+    }
+}
